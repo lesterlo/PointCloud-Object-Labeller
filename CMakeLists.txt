@@ -33,3 +33,8 @@ target_link_libraries(${PROJECT_NAME} ${PCL_LIBRARIES})
 
 qt5_use_modules(${PROJECT_NAME} Widgets)
 
+install(TARGETS ${PROJECT_NAME}
+	RUNTIME DESTINATION bin
+)
+
+
