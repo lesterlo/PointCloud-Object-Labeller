@@ -18,7 +18,6 @@ PCL_Labeller::PCL_Labeller (QWidget *parent) :
   ui (new Ui::PCL_Labeller)
 {
   prev_label_index = -1;
-  render_mark_otid_counter = 0;//Reset this counter 
 
   ui->setupUi (this);
   this->setWindowTitle (WINDOW_TITLE);
@@ -456,7 +455,9 @@ PCL_Labeller::drawAllLabel(int highlisted_index)
       item.obj_length,   //Depth
       std::to_string(render_id)//ID
     );
-    viewer->setShapeRenderingProperties(pcl::visualization::PCL_VISUALIZER_REPRESENTATION, pcl::visualization::PCL_VISUALIZER_REPRESENTATION_WIREFRAME, std::to_string(render_mark_otid_counter));//Make the cube to wireframe
+    viewer->setShapeRenderingProperties(pcl::visualization::PCL_VISUALIZER_REPRESENTATION, 
+      pcl::visualization::PCL_VISUALIZER_REPRESENTATION_WIREFRAME, 
+      std::to_string(render_id));//Make the cube to wireframe
     viewer->setShapeRenderingProperties(pcl::visualization::PCL_VISUALIZER_COLOR, 
       render_id == highlisted_index ? 0.0:1.0, //R
       render_id == highlisted_index ? 1.0:0.0, //G
@@ -509,7 +510,6 @@ PCL_Labeller::clean_viewer()
 {
   viewer->removeAllPointClouds();// Clear and empty the viewer
   viewer->removeAllShapes();
-  render_mark_otid_counter = 0;//Reset this counter  since the file is change
 }
 
 

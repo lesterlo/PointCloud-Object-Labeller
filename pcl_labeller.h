@@ -116,10 +116,7 @@ private:
 
   //C std Area
   std::vector<KITTI_Label> label_holder;
-  std::vector<int> render_id_ref;
   int prev_label_index; //For save label
-  int render_mark_otid_counter;
-  bool labelValue_firstTime_flag;
 
 };
 
