@@ -5,8 +5,8 @@ This c++ program provide a interface for the user to label multiple objects on 3
 ## Prerequisite
 Please install the following dependencies: 
 
-1. qt   > =5.x
-2. vtk  >= 6.2
+1.  qt   >= 5.x
+2.  vtk  >= 6.2
 3.  PCL  >= 1.8
 
 I have tested the following installation procedure on ubuntu 16.04.3 & 18.04.1 with the following dependencies version:
