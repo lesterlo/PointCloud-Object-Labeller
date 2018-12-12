@@ -33,7 +33,7 @@ make -j4
 
 ## Run
 ```
-./3D_PointCloud_object_labeller
+./PointCloud_Object_labeller
 ```
 
 ## License
