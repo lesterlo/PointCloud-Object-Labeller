@@ -476,7 +476,9 @@ PCL_Labeller::drawAllLabel(int highlisted_index)
     render_id++;//Inrement the id counter
   }
 
-  ui->qvtkWidget->update();//Update the qvtkWidget to show the updated render view
+  //ui->qvtkWidget->update();//Update the qvtkWidget to show the updated render view
+  ui->qvtkWidget->GetRenderWindow()->Render();
+
 }
 
 //QT work action
