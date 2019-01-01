@@ -36,7 +36,7 @@ PCL_Labeller::PCL_Labeller (QWidget *parent) :
   ui->qvtkWidget->update ();
   viewer->addCoordinateSystem (1.0);
   viewer->setCameraPosition(10, 0, 10, 0, 0, 1);
-  ui->qvtkWidget->update();
+  ui->qvtkWidget->GetRenderWindow()->Render();
   statusBar()->showMessage(tr("Finish setup PCL Visualizer"));
 
   //QT Works
@@ -183,8 +183,7 @@ PCL_Labeller::onFileListItemClicked(QListWidgetItem* item)
     {
       statusBar()->showMessage(tr(CAN_OPEN_PCD)+cur_pcd_file);
       viewer->addPointCloud(display_cloud, "cloud");// Add the current pointcloud to the viewer
-      ui->qvtkWidget->update(); //Update the qvtk widget
-    
+      ui->qvtkWidget->GetRenderWindow()->Render(); //Update the qvtk widget
       //Prepare the label file name
       cur_label_file = QString::fromStdString(std::regex_replace(cur_pcd_file.toStdString(), std::regex(".pcd"), ".txt"));//Replace .pcd to .txt
       //Then load the label file
@@ -475,10 +474,7 @@ PCL_Labeller::drawAllLabel(int highlisted_index)
     
     render_id++;//Inrement the id counter
   }
-
-  //ui->qvtkWidget->update();//Update the qvtkWidget to show the updated render view
-  ui->qvtkWidget->GetRenderWindow()->Render();
-
+  ui->qvtkWidget->GetRenderWindow()->Render();//Update the qvtkWidget to show the updated render view
 }
 
 //QT work action
