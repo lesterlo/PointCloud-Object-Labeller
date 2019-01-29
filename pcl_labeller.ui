@@ -43,9 +43,9 @@
      <number>7</number>
     </property>
     <item row="0" column="0">
-     <layout class="QVBoxLayout" name="verticalLayout_12" stretch="9,1">
+     <layout class="QVBoxLayout" name="verticalLayout_12" stretch="50,0,1">
       <property name="spacing">
-       <number>3</number>
+       <number>0</number>
       </property>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="7,2">
@@ -143,24 +143,63 @@
       </item>
       <item>
        <widget class="QTabWidget" name="tabWidget">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="font">
          <font>
-          <pointsize>8</pointsize>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
           <italic>false</italic>
+          <bold>false</bold>
+          <kerning>true</kerning>
          </font>
+        </property>
+        <property name="tabletTracking">
+         <bool>false</bool>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::DefaultContextMenu</enum>
+        </property>
+        <property name="acceptDrops">
+         <bool>false</bool>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
         </property>
         <property name="tabPosition">
          <enum>QTabWidget::West</enum>
         </property>
+        <property name="tabShape">
+         <enum>QTabWidget::Rounded</enum>
+        </property>
         <property name="currentIndex">
          <number>0</number>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="elideMode">
+         <enum>Qt::ElideNone</enum>
         </property>
         <property name="usesScrollButtons">
          <bool>false</bool>
         </property>
+        <property name="documentMode">
+         <bool>false</bool>
+        </property>
+        <property name="tabBarAutoHide">
+         <bool>false</bool>
+        </property>
         <widget class="QWidget" name="tab_5">
          <attribute name="title">
-          <string>Tab 1</string>
+          <string>T1</string>
          </attribute>
          <layout class="QVBoxLayout" name="verticalLayout_13">
           <property name="spacing">
@@ -179,19 +218,19 @@
            <number>0</number>
           </property>
           <item>
-           <layout class="QVBoxLayout" name="verticalLayout_10" stretch="2,1">
+           <layout class="QVBoxLayout" name="verticalLayout_10" stretch="0">
             <property name="spacing">
              <number>0</number>
             </property>
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1,1,1,1,1,1">
               <item>
-               <layout class="QVBoxLayout" name="verticalLayout_9" stretch="1,1">
+               <layout class="QVBoxLayout" name="verticalLayout_9" stretch="1,0">
                 <item>
                  <widget class="QLabel" name="label_7">
                   <property name="font">
                    <font>
-                    <pointsize>13</pointsize>
+                    <pointsize>16</pointsize>
                     <italic>false</italic>
                    </font>
                   </property>
@@ -204,7 +243,7 @@
                  <widget class="QLineEdit" name="label_le">
                   <property name="font">
                    <font>
-                    <pointsize>14</pointsize>
+                    <pointsize>16</pointsize>
                    </font>
                   </property>
                  </widget>
@@ -217,7 +256,7 @@
                  <widget class="QLabel" name="label">
                   <property name="font">
                    <font>
-                    <pointsize>13</pointsize>
+                    <pointsize>16</pointsize>
                     <italic>false</italic>
                    </font>
                   </property>
@@ -230,7 +269,7 @@
                  <widget class="QDoubleSpinBox" name="centerx_dsb">
                   <property name="font">
                    <font>
-                    <pointsize>14</pointsize>
+                    <pointsize>16</pointsize>
                    </font>
                   </property>
                   <property name="suffix">
@@ -258,7 +297,7 @@
                  <widget class="QLabel" name="label_2">
                   <property name="font">
                    <font>
-                    <pointsize>13</pointsize>
+                    <pointsize>16</pointsize>
                     <italic>false</italic>
                    </font>
                   </property>
@@ -271,7 +310,7 @@
                  <widget class="QDoubleSpinBox" name="centery_dsb">
                   <property name="font">
                    <font>
-                    <pointsize>14</pointsize>
+                    <pointsize>16</pointsize>
                    </font>
                   </property>
                   <property name="suffix">
@@ -299,7 +338,7 @@
                  <widget class="QLabel" name="label_4">
                   <property name="font">
                    <font>
-                    <pointsize>13</pointsize>
+                    <pointsize>16</pointsize>
                     <italic>false</italic>
                    </font>
                   </property>
@@ -312,7 +351,7 @@
                  <widget class="QDoubleSpinBox" name="centerz_dsb">
                   <property name="font">
                    <font>
-                    <pointsize>14</pointsize>
+                    <pointsize>16</pointsize>
                     <italic>false</italic>
                    </font>
                   </property>
@@ -341,7 +380,7 @@
                  <widget class="QLabel" name="label_3">
                   <property name="font">
                    <font>
-                    <pointsize>13</pointsize>
+                    <pointsize>16</pointsize>
                     <italic>false</italic>
                    </font>
                   </property>
@@ -354,7 +393,7 @@
                  <widget class="QDoubleSpinBox" name="widthx_dsb">
                   <property name="font">
                    <font>
-                    <pointsize>14</pointsize>
+                    <pointsize>16</pointsize>
                     <italic>false</italic>
                    </font>
                   </property>
@@ -383,7 +422,7 @@
                  <widget class="QLabel" name="label_5">
                   <property name="font">
                    <font>
-                    <pointsize>13</pointsize>
+                    <pointsize>16</pointsize>
                     <italic>false</italic>
                    </font>
                   </property>
@@ -396,7 +435,7 @@
                  <widget class="QDoubleSpinBox" name="heighty_dsb">
                   <property name="font">
                    <font>
-                    <pointsize>14</pointsize>
+                    <pointsize>16</pointsize>
                    </font>
                   </property>
                   <property name="suffix">
@@ -424,7 +463,7 @@
                  <widget class="QLabel" name="label_6">
                   <property name="font">
                    <font>
-                    <pointsize>13</pointsize>
+                    <pointsize>16</pointsize>
                     <italic>false</italic>
                    </font>
                   </property>
@@ -437,7 +476,7 @@
                  <widget class="QDoubleSpinBox" name="depthz_dsb">
                   <property name="font">
                    <font>
-                    <pointsize>14</pointsize>
+                    <pointsize>16</pointsize>
                     <italic>false</italic>
                    </font>
                   </property>
@@ -462,132 +501,167 @@
               </item>
              </layout>
             </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="2,1,2,1,2,1,2,1,2">
-              <item>
-               <widget class="QPushButton" name="prevPCD_pb">
-                <property name="font">
-                 <font>
-                  <pointsize>14</pointsize>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>&lt;&lt;</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <spacer name="horizontalSpacer_2">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>40</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item>
-               <widget class="QPushButton" name="save_pb">
-                <property name="font">
-                 <font>
-                  <pointsize>14</pointsize>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>Save</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <spacer name="horizontalSpacer_6">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>40</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item>
-               <widget class="QPushButton" name="newLabel_pb">
-                <property name="font">
-                 <font>
-                  <pointsize>14</pointsize>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>New Label</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <spacer name="horizontalSpacer_4">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>40</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item>
-               <widget class="QPushButton" name="deleteLabel_pb">
-                <property name="font">
-                 <font>
-                  <pointsize>14</pointsize>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>Delete Label</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <spacer name="horizontalSpacer_5">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>40</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item>
-               <widget class="QPushButton" name="nextPCD_pb">
-                <property name="font">
-                 <font>
-                  <pointsize>14</pointsize>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>&gt;&gt;</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
            </layout>
           </item>
          </layout>
         </widget>
         <widget class="QWidget" name="tab_6">
          <attribute name="title">
-          <string>Tab 2</string>
+          <string>T2</string>
          </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_14">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_15">
+            <item>
+             <widget class="QPushButton" name="pushButton_2">
+              <property name="text">
+               <string>Test Button</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_3">
+              <property name="text">
+               <string>Test Button 2</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
         </widget>
        </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="2,1,2,1,2,1,2,1,2">
+        <item>
+         <widget class="QPushButton" name="prevPCD_pb">
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>&lt;&lt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="save_pb">
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Save</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_6">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="newLabel_pb">
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>New Label</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="deleteLabel_pb">
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Delete Label</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="nextPCD_pb">
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>&gt;&gt;</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </item>
