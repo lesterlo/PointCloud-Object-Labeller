@@ -119,7 +119,7 @@
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,1">
             <item>
-             <widget class="QPushButton" name="pushButton_5">
+             <widget class="QPushButton" name="cfp_pb">
               <property name="text">
                <string>Copy from Prev</string>
               </property>
