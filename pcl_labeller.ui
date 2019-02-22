@@ -619,6 +619,9 @@
          </layout>
         </widget>
         <widget class="QWidget" name="tab_6">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <attribute name="title">
           <string>T2</string>
          </attribute>
