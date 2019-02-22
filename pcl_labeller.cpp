@@ -130,6 +130,9 @@ PCL_Labeller::labelUI_Signal_enable(bool state)
     connect(ui->centerx_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
     connect(ui->centery_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
     connect(ui->centerz_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
+    connect(ui->rotationx_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
+    connect(ui->rotationy_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
+    connect(ui->rotationz_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
     connect(ui->widthx_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
     connect(ui->centerx_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
     connect(ui->heighty_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
@@ -141,6 +144,9 @@ PCL_Labeller::labelUI_Signal_enable(bool state)
     disconnect(ui->centerx_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
     disconnect(ui->centery_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
     disconnect(ui->centerz_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
+    disconnect(ui->rotationx_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
+    disconnect(ui->rotationy_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
+    disconnect(ui->rotationz_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
     disconnect(ui->widthx_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
     disconnect(ui->centerx_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
     disconnect(ui->heighty_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
