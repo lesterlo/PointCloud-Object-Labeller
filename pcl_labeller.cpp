@@ -424,6 +424,9 @@ PCL_Labeller::label_UI_enable(int level, bool state)
         ui->centerx_dsb->setEnabled(state);
         ui->centery_dsb->setEnabled(state);
         ui->centerz_dsb->setEnabled(state);
+        ui->rotationx_dsb->setEnabled(state);
+        ui->rotationy_dsb->setEnabled(state);
+        ui->rotationz_dsb->setEnabled(state);
         ui->widthx_dsb->setEnabled(state);
         ui->heighty_dsb->setEnabled(state);
         ui->depthz_dsb->setEnabled(state);

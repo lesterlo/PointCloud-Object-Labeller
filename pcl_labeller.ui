@@ -255,18 +255,23 @@
                     <pointsize>16</pointsize>
                    </font>
                   </property>
+                  <property name="dragEnabled">
+                   <bool>false</bool>
+                  </property>
+                  <property name="clearButtonEnabled">
+                   <bool>false</bool>
+                  </property>
                  </widget>
                 </item>
                </layout>
               </item>
               <item>
-               <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,0">
+               <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,0,0,0">
                 <item>
                  <widget class="QLabel" name="label">
                   <property name="font">
                    <font>
-                    <pointsize>16</pointsize>
-                    <italic>false</italic>
+                    <pointsize>13</pointsize>
                    </font>
                   </property>
                   <property name="text">
@@ -278,7 +283,7 @@
                  <widget class="QDoubleSpinBox" name="centerx_dsb">
                   <property name="font">
                    <font>
-                    <pointsize>16</pointsize>
+                    <pointsize>13</pointsize>
                    </font>
                   </property>
                   <property name="suffix">
@@ -288,7 +293,7 @@
                    <number>3</number>
                   </property>
                   <property name="minimum">
-                   <double>-999.000000000000000</double>
+                   <double>-997.000000000000000</double>
                   </property>
                   <property name="maximum">
                    <double>999.000000000000000</double>
@@ -298,15 +303,51 @@
                   </property>
                  </widget>
                 </item>
+                <item>
+                 <widget class="QLabel" name="label_66">
+                  <property name="font">
+                   <font>
+                    <pointsize>13</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Rotation - X</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QDoubleSpinBox" name="rotationx_dsb">
+                  <property name="font">
+                   <font>
+                    <pointsize>13</pointsize>
+                   </font>
+                  </property>
+                  <property name="suffix">
+                   <string> º</string>
+                  </property>
+                  <property name="decimals">
+                   <number>1</number>
+                  </property>
+                  <property name="minimum">
+                   <double>0.000000000000000</double>
+                  </property>
+                  <property name="maximum">
+                   <double>359.899999999999977</double>
+                  </property>
+                  <property name="singleStep">
+                   <double>1.000000000000000</double>
+                  </property>
+                 </widget>
+                </item>
                </layout>
               </item>
               <item>
-               <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,0">
+               <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,0,0,0">
                 <item>
                  <widget class="QLabel" name="label_2">
                   <property name="font">
                    <font>
-                    <pointsize>16</pointsize>
+                    <pointsize>13</pointsize>
                     <italic>false</italic>
                    </font>
                   </property>
@@ -319,7 +360,7 @@
                  <widget class="QDoubleSpinBox" name="centery_dsb">
                   <property name="font">
                    <font>
-                    <pointsize>16</pointsize>
+                    <pointsize>13</pointsize>
                    </font>
                   </property>
                   <property name="suffix">
@@ -339,15 +380,48 @@
                   </property>
                  </widget>
                 </item>
+                <item>
+                 <widget class="QLabel" name="label_67">
+                  <property name="font">
+                   <font>
+                    <pointsize>13</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Rotation - Y</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QDoubleSpinBox" name="rotationy_dsb">
+                  <property name="font">
+                   <font>
+                    <pointsize>13</pointsize>
+                   </font>
+                  </property>
+                  <property name="suffix">
+                   <string> º</string>
+                  </property>
+                  <property name="decimals">
+                   <number>1</number>
+                  </property>
+                  <property name="maximum">
+                   <double>359.899999999999977</double>
+                  </property>
+                  <property name="singleStep">
+                   <double>1.000000000000000</double>
+                  </property>
+                 </widget>
+                </item>
                </layout>
               </item>
               <item>
-               <layout class="QVBoxLayout" name="verticalLayout_6" stretch="1,0">
+               <layout class="QVBoxLayout" name="verticalLayout_6" stretch="1,0,0,0">
                 <item>
                  <widget class="QLabel" name="label_4">
                   <property name="font">
                    <font>
-                    <pointsize>16</pointsize>
+                    <pointsize>13</pointsize>
                     <italic>false</italic>
                    </font>
                   </property>
@@ -360,7 +434,7 @@
                  <widget class="QDoubleSpinBox" name="centerz_dsb">
                   <property name="font">
                    <font>
-                    <pointsize>16</pointsize>
+                    <pointsize>13</pointsize>
                     <italic>false</italic>
                    </font>
                   </property>
@@ -378,6 +452,36 @@
                   </property>
                   <property name="singleStep">
                    <double>0.050000000000000</double>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_74">
+                  <property name="font">
+                   <font>
+                    <pointsize>13</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Rotation - Z</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QDoubleSpinBox" name="rotationz_dsb">
+                  <property name="font">
+                   <font>
+                    <pointsize>13</pointsize>
+                   </font>
+                  </property>
+                  <property name="suffix">
+                   <string> º</string>
+                  </property>
+                  <property name="decimals">
+                   <number>1</number>
+                  </property>
+                  <property name="maximum">
+                   <double>359.899999999999977</double>
                   </property>
                  </widget>
                 </item>
