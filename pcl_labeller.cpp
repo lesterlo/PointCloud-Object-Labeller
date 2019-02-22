@@ -448,7 +448,6 @@ PCL_Labeller::label_UI_enable(int level, bool state)
 void 
 PCL_Labeller::drawAllLabel(int highlisted_index)
 {
-  QStringList label_name;
   int render_id = 0;
 
   viewer->removeAllShapes();//Clear all bounding cube first
@@ -478,8 +477,7 @@ PCL_Labeller::drawAllLabel(int highlisted_index)
     );
     // viewer->addText3D (const std::string &text, const PointT &position, double textScale=1.0, double r=1.0, double g=1.0, double b=1.0, const std::string &id="");//Add anotation Text
     
-    //Add label name to the element
-    label_name << QString::fromStdString(item.type);
+    //Render the
     
     render_id++;//Inrement the id counter
   }
