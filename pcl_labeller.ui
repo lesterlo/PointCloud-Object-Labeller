@@ -266,7 +266,7 @@
                </layout>
               </item>
               <item>
-               <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,0,0,0">
+               <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,2,1,2">
                 <item>
                  <widget class="QLabel" name="label">
                   <property name="font">
@@ -342,7 +342,7 @@
                </layout>
               </item>
               <item>
-               <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,0,0,0">
+               <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,2,1,2">
                 <item>
                  <widget class="QLabel" name="label_2">
                   <property name="font">
@@ -416,7 +416,7 @@
                </layout>
               </item>
               <item>
-               <layout class="QVBoxLayout" name="verticalLayout_6" stretch="1,0,0,0">
+               <layout class="QVBoxLayout" name="verticalLayout_6" stretch="1,2,1,2">
                 <item>
                  <widget class="QLabel" name="label_4">
                   <property name="font">
@@ -656,7 +656,7 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>1209</width>
+                 <width>1142</width>
                  <height>360</height>
                 </rect>
                </property>
