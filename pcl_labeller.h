@@ -5,6 +5,8 @@
 #ifndef PCL_LABELLER_H
 #define PCL_LABELLER_H
 
+#include "label_define.h"
+
 //Include
 //std
 #include <iostream>
@@ -30,26 +32,6 @@ typedef pcl::PointXYZ PointT;
 typedef pcl::PointCloud<PointT> PointCloudT;
 
 enum {LABEL_UI_CUROR, LABEL_UI};
-
-typedef struct
-{
-  std::string type;
-  double truncated;
-  int occluded;
-  double alpha;
-  double x_min;
-  double y_min;
-  double x_max;
-  double y_max;
-  double obj_height;
-  double obj_width;
-  double obj_length;
-  double obj_x;
-  double obj_y;
-  double obj_z;
-  double rotation_y;
-} KITTI_Label;
-
 
 
 //QT Class decalration
