@@ -248,6 +248,7 @@
                   </property>
                   <property name="font">
                    <font>
+                    <family>Courier 10 Pitch</family>
                     <pointsize>16</pointsize>
                     <italic>false</italic>
                    </font>
@@ -267,6 +268,7 @@
                   </property>
                   <property name="font">
                    <font>
+                    <family>Courier 10 Pitch</family>
                     <pointsize>16</pointsize>
                    </font>
                   </property>
@@ -292,6 +294,7 @@
                   </property>
                   <property name="font">
                    <font>
+                    <family>Courier 10 Pitch</family>
                     <pointsize>13</pointsize>
                    </font>
                   </property>
@@ -310,6 +313,7 @@
                   </property>
                   <property name="font">
                    <font>
+                    <family>Courier 10 Pitch</family>
                     <pointsize>13</pointsize>
                    </font>
                   </property>
@@ -334,6 +338,7 @@
                  <widget class="QLabel" name="rotationx_le">
                   <property name="font">
                    <font>
+                    <family>Courier 10 Pitch</family>
                     <pointsize>13</pointsize>
                    </font>
                   </property>
@@ -346,6 +351,7 @@
                  <widget class="QDoubleSpinBox" name="rotatex_dsb">
                   <property name="font">
                    <font>
+                    <family>Courier 10 Pitch</family>
                     <pointsize>13</pointsize>
                    </font>
                   </property>
@@ -380,6 +386,7 @@
                   </property>
                   <property name="font">
                    <font>
+                    <family>Courier 10 Pitch</family>
                     <pointsize>13</pointsize>
                     <italic>false</italic>
                    </font>
@@ -399,6 +406,7 @@
                   </property>
                   <property name="font">
                    <font>
+                    <family>Courier 10 Pitch</family>
                     <pointsize>13</pointsize>
                    </font>
                   </property>
@@ -429,6 +437,7 @@
                   </property>
                   <property name="font">
                    <font>
+                    <family>Courier 10 Pitch</family>
                     <pointsize>13</pointsize>
                    </font>
                   </property>
@@ -447,6 +456,7 @@
                   </property>
                   <property name="font">
                    <font>
+                    <family>Courier 10 Pitch</family>
                     <pointsize>13</pointsize>
                    </font>
                   </property>
@@ -469,9 +479,16 @@
               <item>
                <layout class="QVBoxLayout" name="verticalLayout_6" stretch="1,1,1,1">
                 <item>
-                 <widget class="QLabel" name="label_4">
+                 <widget class="QLabel" name="centerz_le">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="font">
                    <font>
+                    <family>Courier 10 Pitch</family>
                     <pointsize>13</pointsize>
                     <italic>false</italic>
                    </font>
@@ -483,8 +500,15 @@
                 </item>
                 <item>
                  <widget class="QDoubleSpinBox" name="centerz_dsb">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="font">
                    <font>
+                    <family>Courier 10 Pitch</family>
                     <pointsize>13</pointsize>
                     <italic>false</italic>
                    </font>
@@ -507,9 +531,16 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_74">
+                 <widget class="QLabel" name="rotate_le">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="font">
                    <font>
+                    <family>Courier 10 Pitch</family>
                     <pointsize>13</pointsize>
                    </font>
                   </property>
@@ -520,8 +551,15 @@
                 </item>
                 <item>
                  <widget class="QDoubleSpinBox" name="rotatez_dsb">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="font">
                    <font>
+                    <family>Courier 10 Pitch</family>
                     <pointsize>13</pointsize>
                    </font>
                   </property>
@@ -541,9 +579,16 @@
               <item>
                <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,1">
                 <item>
-                 <widget class="QLabel" name="label_3">
+                 <widget class="QLabel" name="widthx_le">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="font">
                    <font>
+                    <family>Courier 10 Pitch</family>
                     <pointsize>16</pointsize>
                     <italic>false</italic>
                    </font>
@@ -555,8 +600,15 @@
                 </item>
                 <item>
                  <widget class="QDoubleSpinBox" name="widthx_dsb">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="font">
                    <font>
+                    <family>Courier 10 Pitch</family>
                     <pointsize>16</pointsize>
                     <italic>false</italic>
                    </font>
@@ -583,9 +635,16 @@
               <item>
                <layout class="QVBoxLayout" name="verticalLayout_7" stretch="1,1">
                 <item>
-                 <widget class="QLabel" name="label_5">
+                 <widget class="QLabel" name="heighty_le">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="font">
                    <font>
+                    <family>Courier 10 Pitch</family>
                     <pointsize>16</pointsize>
                     <italic>false</italic>
                    </font>
@@ -597,8 +656,15 @@
                 </item>
                 <item>
                  <widget class="QDoubleSpinBox" name="heighty_dsb">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="font">
                    <font>
+                    <family>Courier 10 Pitch</family>
                     <pointsize>16</pointsize>
                    </font>
                   </property>
@@ -624,9 +690,16 @@
               <item>
                <layout class="QVBoxLayout" name="verticalLayout_8" stretch="1,1">
                 <item>
-                 <widget class="QLabel" name="label_6">
+                 <widget class="QLabel" name="depthz_le">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="font">
                    <font>
+                    <family>Courier 10 Pitch</family>
                     <pointsize>16</pointsize>
                     <italic>false</italic>
                    </font>
@@ -638,8 +711,15 @@
                 </item>
                 <item>
                  <widget class="QDoubleSpinBox" name="depthz_dsb">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="font">
                    <font>
+                    <family>Courier 10 Pitch</family>
                     <pointsize>16</pointsize>
                     <italic>false</italic>
                    </font>
