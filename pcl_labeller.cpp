@@ -486,14 +486,16 @@ PCL_Labeller::drawAllLabel(int highlisted_index)
       viewer->addCoordinateSystem(
         REF_AXIS_WIDTH, //Scale size
         Eigen::Affine3f( //Add Pose
-          Eigen::Translation3f(
+          //Add translation
+          Eigen::Translation3f( 
             item.center_x, 
             item.center_y, 
             item.center_z
           ) *
-          Eigen::AngleAxisf(item.rotate_x * (M_PI/180.0), Eigen::Vector3f::UnitX()) * 
-          Eigen::AngleAxisf(item.rotate_y * (M_PI/180.0), Eigen::Vector3f::UnitY()) * 
-          Eigen::AngleAxisf(item.rotate_z * (M_PI/180.0), Eigen::Vector3f::UnitZ())
+          //Add X, Y, Z rotation
+          Eigen::AngleAxisf(TO_RAD(item.rotate_x), Eigen::Vector3f::UnitX()) * 
+          Eigen::AngleAxisf(TO_RAD(item.rotate_y), Eigen::Vector3f::UnitY()) * 
+          Eigen::AngleAxisf(TO_RAD(item.rotate_z), Eigen::Vector3f::UnitZ())
         ),
         std::to_string(render_id)//Specific ID
       );
@@ -505,9 +507,9 @@ PCL_Labeller::drawAllLabel(int highlisted_index)
         item.center_z
       ), 
       Eigen::Quaternionf( //Rotation of the Cube
-        Eigen::AngleAxisf(item.rotate_x * (M_PI/180.0), Eigen::Vector3f::UnitX()) * 
-        Eigen::AngleAxisf(item.rotate_y * (M_PI/180.0), Eigen::Vector3f::UnitY()) * 
-        Eigen::AngleAxisf(item.rotate_z * (M_PI/180.0), Eigen::Vector3f::UnitZ())  
+        Eigen::AngleAxisf(TO_RAD(item.rotate_x), Eigen::Vector3f::UnitX()) * 
+        Eigen::AngleAxisf(TO_RAD(item.rotate_y), Eigen::Vector3f::UnitY()) * 
+        Eigen::AngleAxisf(TO_RAD(item.rotate_z), Eigen::Vector3f::UnitZ())  
       ),
       item.x_size, //width
       item.y_size, //Height

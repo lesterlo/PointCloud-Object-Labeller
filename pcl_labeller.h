@@ -7,6 +7,8 @@
 
 #include "label_define.h"
 
+#define TO_RAD(DEG) (DEG * (M_PI/180.0))
+
 //Include
 //std
 #include <iostream>
