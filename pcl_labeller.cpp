@@ -485,9 +485,16 @@ PCL_Labeller::drawAllLabel(int highlisted_index)
     if(render_id == highlisted_index)
       viewer->addCoordinateSystem(
         REF_AXIS_WIDTH, //Scale size
-        item.center_x, 
-        item.center_y, 
-        item.center_z,
+        Eigen::Affine3f( //Add Pose
+          Eigen::Translation3f(
+            item.center_x, 
+            item.center_y, 
+            item.center_z
+          ) *
+          Eigen::AngleAxisf(item.rotate_x * (M_PI/180.0), Eigen::Vector3f::UnitX()) * 
+          Eigen::AngleAxisf(item.rotate_y * (M_PI/180.0), Eigen::Vector3f::UnitY()) * 
+          Eigen::AngleAxisf(item.rotate_z * (M_PI/180.0), Eigen::Vector3f::UnitZ())
+        ),
         std::to_string(render_id)//Specific ID
       );
     //Draw the bounding cube
@@ -495,11 +502,13 @@ PCL_Labeller::drawAllLabel(int highlisted_index)
       Eigen::Vector3f( //Translation of center
         item.center_x, 
         item.center_y, 
-        item.center_z) , 
+        item.center_z
+      ), 
       Eigen::Quaternionf( //Rotation of the Cube
         Eigen::AngleAxisf(item.rotate_x * (M_PI/180.0), Eigen::Vector3f::UnitX()) * 
         Eigen::AngleAxisf(item.rotate_y * (M_PI/180.0), Eigen::Vector3f::UnitY()) * 
-        Eigen::AngleAxisf(item.rotate_z * (M_PI/180.0), Eigen::Vector3f::UnitZ())  ) ,
+        Eigen::AngleAxisf(item.rotate_z * (M_PI/180.0), Eigen::Vector3f::UnitZ())  
+      ),
       item.x_size, //width
       item.y_size, //Height
       item.z_size,   //Depth
