@@ -7,6 +7,7 @@
 
 //Program parameter
 #define BCUBE_LINEWIDTH 1
+#define REF_AXIS_WIDTH 0.5
 
 
 //String config

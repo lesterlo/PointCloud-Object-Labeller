@@ -473,13 +473,24 @@ PCL_Labeller::drawAllLabel(int highlisted_index)
 {
   int render_id = 0;
 
+  //Remove all shape and Coordinate System before Drawing
   viewer->removeAllShapes();//Clear all bounding cube first
+  viewer->removeAllCoordinateSystems(); //Clear all CoordinateSystem
+
+  //Add the element
+  viewer->addCoordinateSystem(); //Add the Center Axis
   for(HSTM_Label item : label_holder)
   {
-    //render the bounding cube
-    std::cout << "rotate_x: " << item.rotate_x << std::endl; 
-    std::cout << "rotate_y: " << item.rotate_y << std::endl; 
-    std::cout << "rotate_z: " << item.rotate_z << std::endl; 
+    //Draw the Reference 3D axis
+    if(render_id == highlisted_index)
+      viewer->addCoordinateSystem(
+        REF_AXIS_WIDTH, //Scale size
+        item.center_x, 
+        item.center_y, 
+        item.center_z,
+        std::to_string(render_id)//Specific ID
+      );
+    //Draw the bounding cube
     viewer->addCube(
       Eigen::Vector3f( //Translation of center
         item.center_x, 
@@ -494,20 +505,34 @@ PCL_Labeller::drawAllLabel(int highlisted_index)
       item.z_size,   //Depth
       std::to_string(render_id)//Specific ID
     );
+    //Make the cube to wireframe
     viewer->setShapeRenderingProperties(pcl::visualization::PCL_VISUALIZER_REPRESENTATION, 
       pcl::visualization::PCL_VISUALIZER_REPRESENTATION_WIREFRAME, 
-      std::to_string(render_id));//Make the cube to wireframe
+      std::to_string(render_id));
+    //Make the cube to red/green depends on the selected item
     viewer->setShapeRenderingProperties(pcl::visualization::PCL_VISUALIZER_COLOR, 
       render_id == highlisted_index ? 0.0:1.0, //R
       render_id == highlisted_index ? 1.0:0.0, //G
       0.0, //B
       std::to_string(render_id)
-    );//Change color
+    );
+    //Set the Wireframe line width
     viewer->setShapeRenderingProperties(pcl::visualization::PCL_VISUALIZER_LINE_WIDTH, 
       BCUBE_LINEWIDTH, //Line Width
       std::to_string(render_id)
     );
-    // viewer->addText3D (const std::string &text, const PointT &position, double textScale=1.0, double r=1.0, double g=1.0, double b=1.0, const std::string &id="");//Add anotation Text
+    // viewer->addText3D(
+    //   item.name, 
+    //   pcl::PointXYZ(
+    //     item.center_x + 15.0, 
+    //     item.center_y + 15.0, 
+    //     item.center_z + 15.0), 
+    //   1.0, //textScale
+    //   1.0, //red color
+    //   1.0, //green color
+    //   1.0, //blue color
+    //   std::to_string(render_id)
+    // );//Add anotation Text
     
     //Render the Skeleton
     
@@ -545,8 +570,10 @@ PCL_Labeller::openFolder()
 void
 PCL_Labeller::clean_viewer()
 {
-  viewer->removeAllPointClouds();// Clear and empty the viewer
-  viewer->removeAllShapes();
+  // Clear and empty the viewer
+  viewer->removeAllPointClouds(); //Clear all Point Cloud
+  viewer->removeAllCoordinateSystems(); //Clear all CoordinateSystem
+  viewer->removeAllShapes(); //Clear all Shape such as Cube
 }
 
 
