@@ -181,7 +181,7 @@
          <enum>QTabWidget::Rounded</enum>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
         <property name="iconSize">
          <size>
@@ -237,9 +237,15 @@
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1,1,1,1,1,1">
               <item>
-               <layout class="QVBoxLayout" name="verticalLayout_9" stretch="1,0">
+               <layout class="QVBoxLayout" name="verticalLayout_9" stretch="1,1">
                 <item>
                  <widget class="QLabel" name="label_7">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="font">
                    <font>
                     <pointsize>16</pointsize>
@@ -253,6 +259,12 @@
                 </item>
                 <item>
                  <widget class="QLineEdit" name="label_le">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="font">
                    <font>
                     <pointsize>16</pointsize>
@@ -269,9 +281,15 @@
                </layout>
               </item>
               <item>
-               <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,2,1,2">
+               <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,1,1,1">
                 <item>
-                 <widget class="QLabel" name="label">
+                 <widget class="QLabel" name="centerx_le">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="font">
                    <font>
                     <pointsize>13</pointsize>
@@ -284,6 +302,12 @@
                 </item>
                 <item>
                  <widget class="QDoubleSpinBox" name="centerx_dsb">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="font">
                    <font>
                     <pointsize>13</pointsize>
@@ -307,7 +331,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_66">
+                 <widget class="QLabel" name="rotationx_le">
                   <property name="font">
                    <font>
                     <pointsize>13</pointsize>
@@ -345,9 +369,15 @@
                </layout>
               </item>
               <item>
-               <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,2,1,2">
+               <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,1,1,1">
                 <item>
-                 <widget class="QLabel" name="label_2">
+                 <widget class="QLabel" name="centery_le">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="font">
                    <font>
                     <pointsize>13</pointsize>
@@ -361,6 +391,12 @@
                 </item>
                 <item>
                  <widget class="QDoubleSpinBox" name="centery_dsb">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="font">
                    <font>
                     <pointsize>13</pointsize>
@@ -384,7 +420,13 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_67">
+                 <widget class="QLabel" name="rotatey_le">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="font">
                    <font>
                     <pointsize>13</pointsize>
@@ -397,6 +439,12 @@
                 </item>
                 <item>
                  <widget class="QDoubleSpinBox" name="rotatey_dsb">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="font">
                    <font>
                     <pointsize>13</pointsize>
@@ -419,7 +467,7 @@
                </layout>
               </item>
               <item>
-               <layout class="QVBoxLayout" name="verticalLayout_6" stretch="1,2,1,2">
+               <layout class="QVBoxLayout" name="verticalLayout_6" stretch="1,1,1,1">
                 <item>
                  <widget class="QLabel" name="label_4">
                   <property name="font">
@@ -491,7 +539,7 @@
                </layout>
               </item>
               <item>
-               <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,0">
+               <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,1">
                 <item>
                  <widget class="QLabel" name="label_3">
                   <property name="font">
@@ -533,7 +581,7 @@
                </layout>
               </item>
               <item>
-               <layout class="QVBoxLayout" name="verticalLayout_7" stretch="1,0">
+               <layout class="QVBoxLayout" name="verticalLayout_7" stretch="1,1">
                 <item>
                  <widget class="QLabel" name="label_5">
                   <property name="font">
@@ -574,7 +622,7 @@
                </layout>
               </item>
               <item>
-               <layout class="QVBoxLayout" name="verticalLayout_8" stretch="1,0">
+               <layout class="QVBoxLayout" name="verticalLayout_8" stretch="1,1">
                 <item>
                  <widget class="QLabel" name="label_6">
                   <property name="font">
@@ -658,7 +706,7 @@
                <property name="geometry">
                 <rect>
                  <x>0</x>
-                 <y>-215</y>
+                 <y>0</y>
                  <width>1209</width>
                  <height>360</height>
                 </rect>
