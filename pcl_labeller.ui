@@ -248,7 +248,6 @@
                   </property>
                   <property name="font">
                    <font>
-                    <family>Courier 10 Pitch</family>
                     <pointsize>16</pointsize>
                     <italic>false</italic>
                    </font>
@@ -268,7 +267,6 @@
                   </property>
                   <property name="font">
                    <font>
-                    <family>Courier 10 Pitch</family>
                     <pointsize>16</pointsize>
                    </font>
                   </property>
@@ -294,7 +292,6 @@
                   </property>
                   <property name="font">
                    <font>
-                    <family>Courier 10 Pitch</family>
                     <pointsize>13</pointsize>
                    </font>
                   </property>
@@ -313,7 +310,6 @@
                   </property>
                   <property name="font">
                    <font>
-                    <family>Courier 10 Pitch</family>
                     <pointsize>13</pointsize>
                    </font>
                   </property>
@@ -336,9 +332,14 @@
                 </item>
                 <item>
                  <widget class="QLabel" name="rotationx_le">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="font">
                    <font>
-                    <family>Courier 10 Pitch</family>
                     <pointsize>13</pointsize>
                    </font>
                   </property>
@@ -349,9 +350,14 @@
                 </item>
                 <item>
                  <widget class="QDoubleSpinBox" name="rotatex_dsb">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="font">
                    <font>
-                    <family>Courier 10 Pitch</family>
                     <pointsize>13</pointsize>
                    </font>
                   </property>
@@ -386,7 +392,6 @@
                   </property>
                   <property name="font">
                    <font>
-                    <family>Courier 10 Pitch</family>
                     <pointsize>13</pointsize>
                     <italic>false</italic>
                    </font>
@@ -406,7 +411,6 @@
                   </property>
                   <property name="font">
                    <font>
-                    <family>Courier 10 Pitch</family>
                     <pointsize>13</pointsize>
                    </font>
                   </property>
@@ -437,7 +441,6 @@
                   </property>
                   <property name="font">
                    <font>
-                    <family>Courier 10 Pitch</family>
                     <pointsize>13</pointsize>
                    </font>
                   </property>
@@ -449,14 +452,13 @@
                 <item>
                  <widget class="QDoubleSpinBox" name="rotatey_dsb">
                   <property name="sizePolicy">
-                   <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
                   <property name="font">
                    <font>
-                    <family>Courier 10 Pitch</family>
                     <pointsize>13</pointsize>
                    </font>
                   </property>
@@ -488,7 +490,6 @@
                   </property>
                   <property name="font">
                    <font>
-                    <family>Courier 10 Pitch</family>
                     <pointsize>13</pointsize>
                     <italic>false</italic>
                    </font>
@@ -508,7 +509,6 @@
                   </property>
                   <property name="font">
                    <font>
-                    <family>Courier 10 Pitch</family>
                     <pointsize>13</pointsize>
                     <italic>false</italic>
                    </font>
@@ -540,7 +540,6 @@
                   </property>
                   <property name="font">
                    <font>
-                    <family>Courier 10 Pitch</family>
                     <pointsize>13</pointsize>
                    </font>
                   </property>
@@ -559,7 +558,6 @@
                   </property>
                   <property name="font">
                    <font>
-                    <family>Courier 10 Pitch</family>
                     <pointsize>13</pointsize>
                    </font>
                   </property>
@@ -588,7 +586,6 @@
                   </property>
                   <property name="font">
                    <font>
-                    <family>Courier 10 Pitch</family>
                     <pointsize>16</pointsize>
                     <italic>false</italic>
                    </font>
@@ -608,7 +605,6 @@
                   </property>
                   <property name="font">
                    <font>
-                    <family>Courier 10 Pitch</family>
                     <pointsize>16</pointsize>
                     <italic>false</italic>
                    </font>
@@ -644,7 +640,6 @@
                   </property>
                   <property name="font">
                    <font>
-                    <family>Courier 10 Pitch</family>
                     <pointsize>16</pointsize>
                     <italic>false</italic>
                    </font>
@@ -664,7 +659,6 @@
                   </property>
                   <property name="font">
                    <font>
-                    <family>Courier 10 Pitch</family>
                     <pointsize>16</pointsize>
                    </font>
                   </property>
@@ -699,7 +693,6 @@
                   </property>
                   <property name="font">
                    <font>
-                    <family>Courier 10 Pitch</family>
                     <pointsize>16</pointsize>
                     <italic>false</italic>
                    </font>
@@ -719,7 +712,6 @@
                   </property>
                   <property name="font">
                    <font>
-                    <family>Courier 10 Pitch</family>
                     <pointsize>16</pointsize>
                     <italic>false</italic>
                    </font>
