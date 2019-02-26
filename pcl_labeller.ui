@@ -316,7 +316,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QDoubleSpinBox" name="rotationx_dsb">
+                 <widget class="QDoubleSpinBox" name="rotatex_dsb">
                   <property name="font">
                    <font>
                     <pointsize>13</pointsize>
@@ -393,7 +393,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QDoubleSpinBox" name="rotationy_dsb">
+                 <widget class="QDoubleSpinBox" name="rotatey_dsb">
                   <property name="font">
                    <font>
                     <pointsize>13</pointsize>
@@ -468,7 +468,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QDoubleSpinBox" name="rotationz_dsb">
+                 <widget class="QDoubleSpinBox" name="rotatez_dsb">
                   <property name="font">
                    <font>
                     <pointsize>13</pointsize>
@@ -656,7 +656,7 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>1142</width>
+                 <width>1209</width>
                  <height>360</height>
                 </rect>
                </property>

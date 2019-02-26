@@ -97,7 +97,7 @@ private:
   QString cur_label_file;
 
   //C std Area
-  std::vector<KITTI_Label> label_holder;
+  std::vector<HSTM_Label> label_holder;
   int prev_label_index; //For save label
 
 };
