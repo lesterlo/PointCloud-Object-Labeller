@@ -120,6 +120,11 @@
            <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,1">
             <item>
              <widget class="QPushButton" name="cfp_pb">
+              <property name="font">
+               <font>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>Copy from Prev</string>
               </property>
@@ -130,6 +135,11 @@
             </item>
             <item>
              <widget class="QPushButton" name="pushButton">
+              <property name="font">
+               <font>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>Reserve</string>
               </property>
@@ -236,8 +246,14 @@
             </property>
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1,1,1,1,1,1">
+              <property name="spacing">
+               <number>0</number>
+              </property>
               <item>
                <layout class="QVBoxLayout" name="verticalLayout_9" stretch="1,1">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
                 <item>
                  <widget class="QLabel" name="label_7">
                   <property name="sizePolicy">
@@ -248,7 +264,7 @@
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>34</pointsize>
+                    <pointsize>16</pointsize>
                     <italic>false</italic>
                    </font>
                   </property>
@@ -285,6 +301,9 @@
               </item>
               <item>
                <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,1,1,1">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
                 <item>
                  <widget class="QLabel" name="centerx_le">
                   <property name="sizePolicy">
@@ -295,7 +314,7 @@
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>34</pointsize>
+                    <pointsize>16</pointsize>
                    </font>
                   </property>
                   <property name="text">
@@ -313,7 +332,7 @@
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>13</pointsize>
+                    <pointsize>16</pointsize>
                    </font>
                   </property>
                   <property name="suffix">
@@ -343,7 +362,7 @@
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>13</pointsize>
+                    <pointsize>16</pointsize>
                    </font>
                   </property>
                   <property name="text">
@@ -361,7 +380,7 @@
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>13</pointsize>
+                    <pointsize>16</pointsize>
                    </font>
                   </property>
                   <property name="suffix">
@@ -385,6 +404,9 @@
               </item>
               <item>
                <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,1,1,1">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
                 <item>
                  <widget class="QLabel" name="centery_le">
                   <property name="sizePolicy">
@@ -395,7 +417,7 @@
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>13</pointsize>
+                    <pointsize>16</pointsize>
                     <italic>false</italic>
                    </font>
                   </property>
@@ -414,7 +436,7 @@
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>13</pointsize>
+                    <pointsize>16</pointsize>
                    </font>
                   </property>
                   <property name="suffix">
@@ -444,7 +466,7 @@
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>13</pointsize>
+                    <pointsize>16</pointsize>
                    </font>
                   </property>
                   <property name="text">
@@ -462,7 +484,7 @@
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>13</pointsize>
+                    <pointsize>16</pointsize>
                    </font>
                   </property>
                   <property name="suffix">
@@ -483,6 +505,9 @@
               </item>
               <item>
                <layout class="QVBoxLayout" name="verticalLayout_6" stretch="1,1,1,1">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
                 <item>
                  <widget class="QLabel" name="centerz_le">
                   <property name="sizePolicy">
@@ -493,7 +518,7 @@
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>13</pointsize>
+                    <pointsize>16</pointsize>
                     <italic>false</italic>
                    </font>
                   </property>
@@ -512,7 +537,7 @@
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>13</pointsize>
+                    <pointsize>16</pointsize>
                     <italic>false</italic>
                    </font>
                   </property>
@@ -543,7 +568,7 @@
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>13</pointsize>
+                    <pointsize>16</pointsize>
                    </font>
                   </property>
                   <property name="text">
@@ -561,7 +586,7 @@
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>13</pointsize>
+                    <pointsize>16</pointsize>
                    </font>
                   </property>
                   <property name="suffix">
@@ -579,6 +604,9 @@
               </item>
               <item>
                <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,1">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
                 <item>
                  <widget class="QLabel" name="widthx_le">
                   <property name="sizePolicy">
@@ -633,6 +661,9 @@
               </item>
               <item>
                <layout class="QVBoxLayout" name="verticalLayout_7" stretch="1,1">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
                 <item>
                  <widget class="QLabel" name="heighty_le">
                   <property name="sizePolicy">
@@ -686,6 +717,9 @@
               </item>
               <item>
                <layout class="QVBoxLayout" name="verticalLayout_8" stretch="1,1">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
                 <item>
                  <widget class="QLabel" name="depthz_le">
                   <property name="sizePolicy">
