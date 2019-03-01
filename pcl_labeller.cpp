@@ -276,22 +276,12 @@ PCL_Labeller::onInsertLabelButtonClicked()
   newLabel.rotate_x = 0.0;
   newLabel.rotate_y = 0.0;
   newLabel.rotate_z = 0.0;
-  newLabel.skeleton_n1 = 0.0;
-  newLabel.skeleton_n2 = 0.0;
-  newLabel.skeleton_n3 = 0.0;
-  newLabel.skeleton_n4 = 0.0;
-  newLabel.skeleton_n5 = 0.0;
-  newLabel.skeleton_n6 = 0.0;
-  newLabel.skeleton_n7 = 0.0;
-  newLabel.skeleton_n8 = 0.0;
-  newLabel.skeleton_n9 = 0.0;
-  newLabel.skeleton_n10 = 0.0;
-  newLabel.skeleton_n11 = 0.0;
-  newLabel.skeleton_n12 = 0.0;
-  newLabel.skeleton_n13 = 0.0;
-  newLabel.skeleton_n14 = 0.0;
-  newLabel.skeleton_n15 = 0.0;
-
+  for(int i=0; i < SKELETON_NODE_COUNT; i++)
+  {
+    newLabel.node[i].x = 0.0;
+    newLabel.node[i].y = 0.0;
+    newLabel.node[i].z = 0.0;
+  }
 
   //Insert the new element to the tail of the list
   label_holder.push_back(newLabel);
@@ -606,38 +596,71 @@ PCL_Labeller::read_label() //Read the label of the current pointcloud
     statusBar()->showMessage(tr(CAN_OPEN_LABEL)+cur_label_file);
     statusBar()->showMessage(tr(LOADING_LABEL_FILE)+cur_label_file);
     std::string line;
+    std::istringstream iss;
     for(int i=0;std::getline(label_file, line);i++)
     {
-        std::istringstream iss(line);//Convert each line in the file to a string stream
+        iss.str(line);//Convert each line in the file to a string stream
         HSTM_Label label_in_file;
 
-        if (!(iss //Parse the stream
-        >> label_in_file.name 
-        >> label_in_file.center_x
-        >> label_in_file.center_y
-        >> label_in_file.center_z
-        >> label_in_file.x_size
-        >> label_in_file.y_size
-        >> label_in_file.z_size
-        >> label_in_file.rotate_x
-        >> label_in_file.rotate_y
-        >> label_in_file.rotate_z
-        >> label_in_file.skeleton_n1
-        >> label_in_file.skeleton_n2
-        >> label_in_file.skeleton_n3
-        >> label_in_file.skeleton_n4
-        >> label_in_file.skeleton_n5
-        >> label_in_file.skeleton_n6
-        >> label_in_file.skeleton_n7
-        >> label_in_file.skeleton_n8
-        >> label_in_file.skeleton_n9
-        >> label_in_file.skeleton_n10
-        >> label_in_file.skeleton_n11
-        >> label_in_file.skeleton_n12
-        >> label_in_file.skeleton_n13
-        >> label_in_file.skeleton_n14
-        >> label_in_file.skeleton_n15
-        ))
+        //Get the normal information
+        if(!(iss //Parse the stream
+              >> label_in_file.name 
+              >> label_in_file.center_x
+              >> label_in_file.center_y
+              >> label_in_file.center_z
+              >> label_in_file.x_size
+              >> label_in_file.y_size
+              >> label_in_file.z_size
+              >> label_in_file.rotate_x
+              >> label_in_file.rotate_y
+              >> label_in_file.rotate_z
+              >> label_in_file.node[0].x
+              >> label_in_file.node[0].y
+              >> label_in_file.node[0].z
+              >> label_in_file.node[1].x
+              >> label_in_file.node[1].y
+              >> label_in_file.node[1].z
+              >> label_in_file.node[2].x
+              >> label_in_file.node[2].y
+              >> label_in_file.node[2].z
+              >> label_in_file.node[3].x
+              >> label_in_file.node[3].y
+              >> label_in_file.node[3].z
+              >> label_in_file.node[4].x
+              >> label_in_file.node[4].y
+              >> label_in_file.node[4].z
+              >> label_in_file.node[5].x
+              >> label_in_file.node[5].y
+              >> label_in_file.node[5].z
+              >> label_in_file.node[6].x
+              >> label_in_file.node[6].y
+              >> label_in_file.node[6].z
+              >> label_in_file.node[7].x
+              >> label_in_file.node[7].y
+              >> label_in_file.node[7].z
+              >> label_in_file.node[8].x
+              >> label_in_file.node[8].y
+              >> label_in_file.node[8].z
+              >> label_in_file.node[9].x
+              >> label_in_file.node[9].y
+              >> label_in_file.node[9].z
+              >> label_in_file.node[10].x
+              >> label_in_file.node[10].y
+              >> label_in_file.node[10].z
+              >> label_in_file.node[11].x
+              >> label_in_file.node[11].y
+              >> label_in_file.node[11].z
+              >> label_in_file.node[12].x
+              >> label_in_file.node[12].y
+              >> label_in_file.node[12].z
+              >> label_in_file.node[13].x
+              >> label_in_file.node[13].y
+              >> label_in_file.node[13].z
+              >> label_in_file.node[14].x
+              >> label_in_file.node[14].y
+              >> label_in_file.node[14].z
+            )   
+          )
         { // error
           statusBar()->showMessage(tr(PARSING_LABEL_FILE_ERROR_P1)+cur_label_file);
           QMessageBox::StandardButton reply;
@@ -708,22 +731,16 @@ PCL_Labeller::write_label()
       << item.z_size << ' '
       << item.rotate_x << ' '
       << item.rotate_y << ' '
-      << item.rotate_z << ' '
-      << item.skeleton_n1 << ' '
-      << item.skeleton_n2 << ' '
-      << item.skeleton_n3 << ' '
-      << item.skeleton_n4 << ' '
-      << item.skeleton_n5 << ' '
-      << item.skeleton_n6 << ' '
-      << item.skeleton_n7 << ' '
-      << item.skeleton_n8 << ' '
-      << item.skeleton_n9 << ' '
-      << item.skeleton_n10 << ' '
-      << item.skeleton_n11 << ' '
-      << item.skeleton_n12 << ' '
-      << item.skeleton_n13 << ' '
-      << item.skeleton_n14 << ' '
-      << item.skeleton_n15 << '\n';
+      << item.rotate_z;
+
+      for(int i=0; i < SKELETON_NODE_COUNT; i++)
+      {
+        label_file 
+        << ' ' << item.node[i].x 
+        << ' ' << item.node[i].y 
+        << ' ' << item.node[i].z;
+      }
+      label_file << '\n';//Add new line at the end of the line
     }
   
     label_file.close();

@@ -3,6 +3,8 @@
 
 #include <string>
 
+#define SKELETON_NODE_COUNT 15
+
 //KITTI Label Type
 // typedef struct
 // {
@@ -23,6 +25,14 @@
 //   double rotation_y;
 // } KITTI_Label;
 
+typedef struct
+{
+  double x;
+  double y;
+  double z;
+} SK_node;
+
+
 
 //(.hst)Human Skeleton Tracking Model Label
 typedef struct
@@ -37,21 +47,7 @@ typedef struct
   double rotate_x;
   double rotate_y;
   double rotate_z;
-  double skeleton_n1;
-  double skeleton_n2;
-  double skeleton_n3;
-  double skeleton_n4;
-  double skeleton_n5;
-  double skeleton_n6;
-  double skeleton_n7;
-  double skeleton_n8;
-  double skeleton_n9;
-  double skeleton_n10;
-  double skeleton_n11;
-  double skeleton_n12;
-  double skeleton_n13;
-  double skeleton_n14;
-  double skeleton_n15;
+  SK_node node[SKELETON_NODE_COUNT];
 } HSTM_Label;
 
 #endif
