@@ -59,57 +59,6 @@ PCL_Labeller::about()
    QMessageBox::about(this, tr(ABOUT_TITLE), tr(ABOUT_CONTENT));
 }
 
-// void 
-// PCL_Labeller::prepareUI()
-// {
-//   ui_sk_storage[0] = ui->sk_n1x_dsb;
-//   ui_sk_storage[1] = ui->sk_n1y_dsb;
-//   ui_sk_storage[2] = ui->sk_n1z_dsb;
-//   ui_sk_storage[3] = ui->sk_n2x_dsb;
-//   ui_sk_storage[4] = ui->sk_n2y_dsb;
-//   ui_sk_storage[5] = ui->sk_n2z_dsb;
-//   ui_sk_storage[6] = ui->sk_n3x_dsb;
-//   ui_sk_storage[7] = ui->sk_n3y_dsb;
-//   ui_sk_storage[8] = ui->sk_n3z_dsb;
-//   ui_sk_storage[9] = ui->sk_n4x_dsb;
-//   ui_sk_storage[10] = ui->sk_n4y_dsb;
-//   ui_sk_storage[11] = ui->sk_n4z_dsb;
-//   ui_sk_storage[12] = ui->sk_n5x_dsb;
-//   ui_sk_storage[13] = ui->sk_n5y_dsb;
-//   ui_sk_storage[14] = ui->sk_n5z_dsb;
-//   ui_sk_storage[15] = ui->sk_n6x_dsb;
-//   ui_sk_storage[16] = ui->sk_n6y_dsb;
-//   ui_sk_storage[17] = ui->sk_n6z_dsb;
-//   ui_sk_storage[18] = ui->sk_n7x_dsb;
-//   ui_sk_storage[19] = ui->sk_n7y_dsb;
-//   ui_sk_storage[20] = ui->sk_n7z_dsb;
-//   ui_sk_storage[21] = ui->sk_n8x_dsb;
-//   ui_sk_storage[22] = ui->sk_n8y_dsb;
-//   ui_sk_storage[23] = ui->sk_n8z_dsb;
-//   ui_sk_storage[24] = ui->sk_n9x_dsb;
-//   ui_sk_storage[25] = ui->sk_n9y_dsb;
-//   ui_sk_storage[26] = ui->sk_n9z_dsb;
-//   ui_sk_storage[27] = ui->sk_n10x_dsb;
-//   ui_sk_storage[28] = ui->sk_n10y_dsb;
-//   ui_sk_storage[29] = ui->sk_n10z_dsb;
-//   ui_sk_storage[30] = ui->sk_n11x_dsb;
-//   ui_sk_storage[31] = ui->sk_n11y_dsb;
-//   ui_sk_storage[32] = ui->sk_n11z_dsb;
-//   ui_sk_storage[33] = ui->sk_n12x_dsb;
-//   ui_sk_storage[34] = ui->sk_n12y_dsb;
-//   ui_sk_storage[35] = ui->sk_n12z_dsb;
-//   ui_sk_storage[36] = ui->sk_n13x_dsb;
-//   ui_sk_storage[37] = ui->sk_n13y_dsb;
-//   ui_sk_storage[38] = ui->sk_n13z_dsb;
-//   ui_sk_storage[39] = ui->sk_n14x_dsb;
-//   ui_sk_storage[40] = ui->sk_n14y_dsb;
-//   ui_sk_storage[41] = ui->sk_n14z_dsb;
-//   ui_sk_storage[42] = ui->sk_n15x_dsb;
-//   ui_sk_storage[43] = ui->sk_n15y_dsb;
-//   ui_sk_storage[44] = ui->sk_n15z_dsb;
-// }
-
-
 //###################################################
 //
 //          Initialize function
@@ -192,9 +141,6 @@ PCL_Labeller::labelUI_Signal_enable(bool state)
     connect(ui->depthz_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
 
     //Joint Tab
-    // for(int i; i < SKELETON_NODE_COUNT*3; i++)
-    //   connect(ui_sk_storage[i] , SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
-
     connect(ui->sk_n1x_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
     connect(ui->sk_n1y_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
     connect(ui->sk_n1z_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
@@ -254,11 +200,7 @@ PCL_Labeller::labelUI_Signal_enable(bool state)
     disconnect(ui->heighty_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
     disconnect(ui->depthz_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
 
-    //Joint Tab
-    // for(int i; i < SKELETON_NODE_COUNT*3; i++)
-    //   disconnect(ui_sk_storage[i] , SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
-
-
+    //Joint tab
     disconnect(ui->sk_n1x_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
     disconnect(ui->sk_n1y_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
     disconnect(ui->sk_n1z_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
@@ -433,14 +375,6 @@ PCL_Labeller::onLabelListItemClicked(QListWidgetItem* item)
       label_holder.at(prev_label_index).sk_n15_x = ui->sk_n15x_dsb->value();
       label_holder.at(prev_label_index).sk_n15_y = ui->sk_n15y_dsb->value();
       label_holder.at(prev_label_index).sk_n15_z = ui->sk_n15z_dsb->value();
-      
-
-      // for(int i=0; i < SKELETON_NODE_COUNT; i++)
-      // {
-      //   label_holder.at(prev_label_index).node[i].x = ui_sk_storage[i*3]->value();
-      //   label_holder.at(prev_label_index).node[i].y = ui_sk_storage[i*3+1]->value();
-      //   label_holder.at(prev_label_index).node[i].z = ui_sk_storage[i*3+2]->value();
-      // }
     }
     //Apply the new data from the label_holder vector to the UI
     ui->label_le->setText(QString::fromStdString(label_holder[cur_label_index].name));
@@ -502,13 +436,6 @@ PCL_Labeller::onLabelListItemClicked(QListWidgetItem* item)
     ui->sk_n15z_dsb->setValue( label_holder.at(cur_label_index).sk_n15_z);
       
     
-    // for(int i=0; i < SKELETON_NODE_COUNT; i++)
-    // {
-    //   ui_sk_storage[i*3]->setValue(label_holder.at(cur_label_index).node[i].x);
-    //   ui_sk_storage[i*3+1]->setValue(label_holder.at(cur_label_index).node[i].y);
-    //   ui_sk_storage[i*3+2]->setValue(label_holder.at(cur_label_index).node[i].z);
-    // }
-
     prev_label_index = ui->label_listWidget->currentRow();//Update the previous index 
     //Change the color??, highted item -> wireframe, others, solid color
     drawAllLabel(ui->label_listWidget->currentRow());//Update the UI that the show elemnt is same with the label_holder vector
@@ -694,17 +621,6 @@ PCL_Labeller::onLabelEditFinish()
     label_holder.at(selected_item_index).sk_n15_z = ui->sk_n15z_dsb->value();
 
 
-    std::cout << "UI label: "  << std::endl;
-    std::cout << "UI.sk_n15_x: " << label_holder.at(selected_item_index).sk_n15_x << std::endl;
-    std::cout << "UI.sk_n15_y: " << label_holder.at(selected_item_index).sk_n15_y << std::endl;
-    std::cout << "UI.sk_n15_z: " << label_holder.at(selected_item_index).sk_n15_z << std::endl;
-    // for(int i=0; i < SKELETON_NODE_COUNT; i++)
-    // {
-    //   label_holder.at(selected_item_index).node[i].x = ui_sk_storage[i*3]->value();
-    //   label_holder.at(selected_item_index).node[i].y = ui_sk_storage[i*3+1]->value();
-    //   label_holder.at(selected_item_index).node[i].z = ui_sk_storage[i*3+2]->value();
-    // }
-
     drawAllLabel(ui->label_listWidget->currentRow());//Update the UI that the shown element is same with the label_holder vector
   }
 }
@@ -867,8 +783,6 @@ PCL_Labeller::label_UI_enable(int level, bool state)
         ui->deleteLabel_pb->setEnabled(state);
 
         //Joint Tab
-        // for(int i; i < SKELETON_NODE_COUNT*3; i++)
-        //   ui_sk_storage[i]->setEnabled(state);
         ui->sk_n1x_dsb->setEnabled(state);
         ui->sk_n1y_dsb->setEnabled(state);
         ui->sk_n1z_dsb->setEnabled(state);
@@ -1063,8 +977,6 @@ PCL_Labeller::read_label() //Read the label of the current pointcloud
   
     for(int i=0;std::getline(label_file, line);i++)
     {
-        //iss.str(line);
-        std::cout << "The line: " << std::endl << line << std::endl << std::endl;
         std::istringstream iss(line);//Convert each line in the file to a string stream
         HSTM_Label label_in_file;
 
@@ -1145,72 +1057,6 @@ PCL_Labeller::read_label() //Read the label of the current pointcloud
           }        
         }
 
-        std::cout << "Data Dump: " << std::endl;
-        std::cout << "label_in_file.name     : " << label_in_file.name  << std::endl;
-        std::cout << "label_in_file.center_x : " << label_in_file.center_x << std::endl;
-        std::cout << "label_in_file.center_y : " << label_in_file.center_y << std::endl;
-        std::cout << "label_in_file.center_z : " << label_in_file.center_z << std::endl;
-        std::cout << "label_in_file.x_size   : " << label_in_file.x_size << std::endl;
-        std::cout << "label_in_file.y_size   : " << label_in_file.y_size << std::endl;
-        std::cout << "label_in_file.z_size   : " << label_in_file.z_size << std::endl;
-        std::cout << "label_in_file.rotate_x : " << label_in_file.rotate_x << std::endl;
-        std::cout << "label_in_file.rotate_y : " << label_in_file.rotate_y << std::endl;
-        std::cout << "label_in_file.rotate_z : " << label_in_file.rotate_z << std::endl;
-
-        std::cout << "label_in_file.sk_n1_x  : " << label_in_file.sk_n1_x << std::endl;
-        std::cout << "label_in_file.sk_n1_y  : " << label_in_file.sk_n1_y << std::endl;
-        std::cout << "label_in_file.sk_n1_z  : " << label_in_file.sk_n1_z << std::endl;
-        std::cout << "label_in_file.sk_n2_x  : " << label_in_file.sk_n2_x << std::endl;
-        std::cout << "label_in_file.sk_n2_y  : " << label_in_file.sk_n2_y << std::endl;
-        std::cout << "label_in_file.sk_n2_z  : " << label_in_file.sk_n2_z << std::endl;
-
-        std::cout << "label_in_file.sk_n3_x  : " << label_in_file.sk_n3_x << std::endl;
-        std::cout << "label_in_file.sk_n3_y  : " << label_in_file.sk_n3_y << std::endl;
-        std::cout << "label_in_file.sk_n3_z  : " << label_in_file.sk_n3_z << std::endl;
-        std::cout << "label_in_file.sk_n4_x  : " << label_in_file.sk_n4_x << std::endl;
-        std::cout << "label_in_file.sk_n4_y  : " << label_in_file.sk_n4_y << std::endl;
-        std::cout << "label_in_file.sk_n4_z  : " << label_in_file.sk_n4_z << std::endl;
-
-        std::cout << "label_in_file.sk_n5_x  : " << label_in_file.sk_n5_x << std::endl;
-        std::cout << "label_in_file.sk_n5_y  : " << label_in_file.sk_n5_y << std::endl;
-        std::cout << "label_in_file.sk_n5_z  : " << label_in_file.sk_n5_z << std::endl;
-        std::cout << "label_in_file.sk_n6_x  : " << label_in_file.sk_n6_x << std::endl;
-        std::cout << "label_in_file.sk_n6_y  : " << label_in_file.sk_n6_y << std::endl;
-        std::cout << "label_in_file.sk_n6_z  : " << label_in_file.sk_n6_z << std::endl;
-
-        std::cout << "label_in_file.sk_n7_x  : " << label_in_file.sk_n7_x << std::endl;
-        std::cout << "label_in_file.sk_n7_y  : " << label_in_file.sk_n7_y << std::endl;
-        std::cout << "label_in_file.sk_n7_z  : " << label_in_file.sk_n7_z << std::endl;
-        std::cout << "label_in_file.sk_n8_x  : " << label_in_file.sk_n8_x << std::endl;
-        std::cout << "label_in_file.sk_n8_y  : " << label_in_file.sk_n8_y << std::endl;
-        std::cout << "label_in_file.sk_n8_z  : " << label_in_file.sk_n8_z << std::endl;
-
-        std::cout << "label_in_file.sk_n9_x  : " << label_in_file.sk_n9_x << std::endl;
-        std::cout << "label_in_file.sk_n9_y  : " << label_in_file.sk_n9_y << std::endl;
-        std::cout << "label_in_file.sk_n9_z  : " << label_in_file.sk_n9_z << std::endl;
-        std::cout << "label_in_file.sk_n10_x  : " << label_in_file.sk_n10_x << std::endl;
-        std::cout << "label_in_file.sk_n10_y  : " << label_in_file.sk_n10_y << std::endl;
-        std::cout << "label_in_file.sk_n10_z  : " << label_in_file.sk_n10_z << std::endl;
-    
-
-        std::cout << "label_in_file.sk_n11_x: " << label_in_file.sk_n11_x << std::endl;
-        std::cout << "label_in_file.sk_n11_y: " << label_in_file.sk_n11_y << std::endl;
-        std::cout << "label_in_file.sk_n11_z: " << label_in_file.sk_n11_z << std::endl;
-        std::cout << "label_in_file.sk_n12_x: " << label_in_file.sk_n12_x << std::endl;
-        std::cout << "label_in_file.sk_n12_y: " << label_in_file.sk_n12_y << std::endl;
-        std::cout << "label_in_file.sk_n12_z: " << label_in_file.sk_n12_z << std::endl;
-
-
-        std::cout << "label_in_file.sk_n13_x: " << label_in_file.sk_n13_x << std::endl;
-        std::cout << "label_in_file.sk_n13_y: " << label_in_file.sk_n13_y << std::endl;
-        std::cout << "label_in_file.sk_n13_z: " << label_in_file.sk_n13_z << std::endl;
-        std::cout << "label_in_file.sk_n14_x: " << label_in_file.sk_n14_x << std::endl;
-        std::cout << "label_in_file.sk_n14_y: " << label_in_file.sk_n14_y << std::endl;
-        std::cout << "label_in_file.sk_n14_z: " << label_in_file.sk_n14_z << std::endl;
-
-        std::cout << "label_in_file.sk_n15_x: " << label_in_file.sk_n15_x << std::endl;
-        std::cout << "label_in_file.sk_n15_y: " << label_in_file.sk_n15_y << std::endl;
-        std::cout << "label_in_file.sk_n15_z: " << label_in_file.sk_n15_z << std::endl;
         //Insert the readed label data to the label holder
         label_holder.push_back(label_in_file);//Save the data
         
@@ -1312,14 +1158,6 @@ PCL_Labeller::write_label()
       << item.sk_n15_y << ' '
       << item.sk_n15_z << '\n';
 
-      // for(int i=0; i < SKELETON_NODE_COUNT; i++)
-      // {
-      //   label_file 
-      //   << ' ' << item.node[i].x 
-      //   << ' ' << item.node[i].y 
-      //   << ' ' << item.node[i].z;
-      // }
-      // label_file << '\n';//Add new line at the end of the line
     }
   
     label_file.close();
