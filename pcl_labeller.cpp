@@ -388,51 +388,51 @@ PCL_Labeller::onLabelListItemClicked(QListWidgetItem* item)
       label_holder.at(prev_label_index).rotate_z = ui->rotatez_dsb->value();
 
       //Joint Tab
-      label_holder.at(prev_label_index).node[0].x = ui->sk_n1x_dsb->value();
-      label_holder.at(prev_label_index).node[0].y = ui->sk_n1y_dsb->value();
-      label_holder.at(prev_label_index).node[0].z = ui->sk_n1z_dsb->value();
-      label_holder.at(prev_label_index).node[1].x = ui->sk_n2x_dsb->value();
-      label_holder.at(prev_label_index).node[1].y = ui->sk_n2y_dsb->value();
-      label_holder.at(prev_label_index).node[1].z = ui->sk_n2z_dsb->value();
-      label_holder.at(prev_label_index).node[2].x = ui->sk_n3x_dsb->value();
-      label_holder.at(prev_label_index).node[2].y = ui->sk_n3y_dsb->value();
-      label_holder.at(prev_label_index).node[2].z = ui->sk_n3z_dsb->value();
-      label_holder.at(prev_label_index).node[3].x = ui->sk_n4x_dsb->value();
-      label_holder.at(prev_label_index).node[3].y = ui->sk_n4y_dsb->value();
-      label_holder.at(prev_label_index).node[3].z = ui->sk_n4z_dsb->value();
-      label_holder.at(prev_label_index).node[4].x = ui->sk_n5x_dsb->value();
-      label_holder.at(prev_label_index).node[4].y = ui->sk_n5y_dsb->value();
-      label_holder.at(prev_label_index).node[4].z = ui->sk_n5z_dsb->value();
-      label_holder.at(prev_label_index).node[5].x = ui->sk_n6x_dsb->value();
-      label_holder.at(prev_label_index).node[5].y = ui->sk_n6y_dsb->value();
-      label_holder.at(prev_label_index).node[5].z = ui->sk_n6z_dsb->value();
-      label_holder.at(prev_label_index).node[6].x = ui->sk_n7x_dsb->value();
-      label_holder.at(prev_label_index).node[6].y = ui->sk_n7y_dsb->value();
-      label_holder.at(prev_label_index).node[6].z = ui->sk_n7z_dsb->value();
-      label_holder.at(prev_label_index).node[7].x = ui->sk_n8x_dsb->value();
-      label_holder.at(prev_label_index).node[7].y = ui->sk_n8y_dsb->value();
-      label_holder.at(prev_label_index).node[7].z = ui->sk_n8z_dsb->value();
-      label_holder.at(prev_label_index).node[8].x = ui->sk_n9x_dsb->value();
-      label_holder.at(prev_label_index).node[8].y = ui->sk_n9y_dsb->value();
-      label_holder.at(prev_label_index).node[8].z = ui->sk_n9z_dsb->value();
-      label_holder.at(prev_label_index).node[9].x = ui->sk_n10x_dsb->value();
-      label_holder.at(prev_label_index).node[9].y = ui->sk_n10y_dsb->value();
-      label_holder.at(prev_label_index).node[9].z = ui->sk_n10z_dsb->value();
-      label_holder.at(prev_label_index).node[10].x = ui->sk_n11x_dsb->value();
-      label_holder.at(prev_label_index).node[10].y = ui->sk_n11y_dsb->value();
-      label_holder.at(prev_label_index).node[10].z = ui->sk_n11z_dsb->value();
-      label_holder.at(prev_label_index).node[11].x = ui->sk_n12x_dsb->value();
-      label_holder.at(prev_label_index).node[11].y = ui->sk_n12y_dsb->value();
-      label_holder.at(prev_label_index).node[11].z = ui->sk_n12z_dsb->value();
-      label_holder.at(prev_label_index).node[12].x = ui->sk_n13x_dsb->value();
-      label_holder.at(prev_label_index).node[12].y = ui->sk_n13y_dsb->value();
-      label_holder.at(prev_label_index).node[12].z = ui->sk_n13z_dsb->value();
-      label_holder.at(prev_label_index).node[13].x = ui->sk_n14x_dsb->value();
-      label_holder.at(prev_label_index).node[13].y = ui->sk_n14y_dsb->value();
-      label_holder.at(prev_label_index).node[13].z = ui->sk_n14z_dsb->value();
-      label_holder.at(prev_label_index).node[14].x = ui->sk_n15x_dsb->value();
-      label_holder.at(prev_label_index).node[14].y = ui->sk_n15y_dsb->value();
-      label_holder.at(prev_label_index).node[14].z = ui->sk_n15z_dsb->value();
+      label_holder.at(prev_label_index).sk_n1_x  = ui->sk_n1x_dsb->value();
+      label_holder.at(prev_label_index).sk_n1_y  = ui->sk_n1y_dsb->value();
+      label_holder.at(prev_label_index).sk_n1_z  = ui->sk_n1z_dsb->value();
+      label_holder.at(prev_label_index).sk_n2_x  = ui->sk_n2x_dsb->value();
+      label_holder.at(prev_label_index).sk_n2_y  = ui->sk_n2y_dsb->value();
+      label_holder.at(prev_label_index).sk_n2_z  = ui->sk_n2z_dsb->value();
+      label_holder.at(prev_label_index).sk_n3_x  = ui->sk_n3x_dsb->value();
+      label_holder.at(prev_label_index).sk_n3_y  = ui->sk_n3y_dsb->value();
+      label_holder.at(prev_label_index).sk_n3_z  = ui->sk_n3z_dsb->value();
+      label_holder.at(prev_label_index).sk_n4_x  = ui->sk_n4x_dsb->value();
+      label_holder.at(prev_label_index).sk_n4_y  = ui->sk_n4y_dsb->value();
+      label_holder.at(prev_label_index).sk_n4_z  = ui->sk_n4z_dsb->value();
+      label_holder.at(prev_label_index).sk_n5_x  = ui->sk_n5x_dsb->value();
+      label_holder.at(prev_label_index).sk_n5_y  = ui->sk_n5y_dsb->value();
+      label_holder.at(prev_label_index).sk_n5_z  = ui->sk_n5z_dsb->value();
+      label_holder.at(prev_label_index).sk_n6_x  = ui->sk_n6x_dsb->value();
+      label_holder.at(prev_label_index).sk_n6_y  = ui->sk_n6y_dsb->value();
+      label_holder.at(prev_label_index).sk_n6_z  = ui->sk_n6z_dsb->value();
+      label_holder.at(prev_label_index).sk_n7_x  = ui->sk_n7x_dsb->value();
+      label_holder.at(prev_label_index).sk_n7_y  = ui->sk_n7y_dsb->value();
+      label_holder.at(prev_label_index).sk_n7_z  = ui->sk_n7z_dsb->value();
+      label_holder.at(prev_label_index).sk_n8_x  = ui->sk_n8x_dsb->value();
+      label_holder.at(prev_label_index).sk_n8_y  = ui->sk_n8y_dsb->value();
+      label_holder.at(prev_label_index).sk_n8_z  = ui->sk_n8z_dsb->value();
+      label_holder.at(prev_label_index).sk_n9_x  = ui->sk_n9x_dsb->value();
+      label_holder.at(prev_label_index).sk_n9_y  = ui->sk_n9y_dsb->value();
+      label_holder.at(prev_label_index).sk_n9_z  = ui->sk_n9z_dsb->value();
+      label_holder.at(prev_label_index).sk_n10_x = ui->sk_n10x_dsb->value();
+      label_holder.at(prev_label_index).sk_n10_y = ui->sk_n10y_dsb->value();
+      label_holder.at(prev_label_index).sk_n10_z = ui->sk_n10z_dsb->value();
+      label_holder.at(prev_label_index).sk_n11_x = ui->sk_n11x_dsb->value();
+      label_holder.at(prev_label_index).sk_n11_y = ui->sk_n11y_dsb->value();
+      label_holder.at(prev_label_index).sk_n11_z = ui->sk_n11z_dsb->value();
+      label_holder.at(prev_label_index).sk_n12_x = ui->sk_n12x_dsb->value();
+      label_holder.at(prev_label_index).sk_n12_y = ui->sk_n12y_dsb->value();
+      label_holder.at(prev_label_index).sk_n12_z = ui->sk_n12z_dsb->value();
+      label_holder.at(prev_label_index).sk_n13_x = ui->sk_n13x_dsb->value();
+      label_holder.at(prev_label_index).sk_n13_y = ui->sk_n13y_dsb->value();
+      label_holder.at(prev_label_index).sk_n13_z = ui->sk_n13z_dsb->value();
+      label_holder.at(prev_label_index).sk_n14_x = ui->sk_n14x_dsb->value();
+      label_holder.at(prev_label_index).sk_n14_y = ui->sk_n14y_dsb->value();
+      label_holder.at(prev_label_index).sk_n14_z = ui->sk_n14z_dsb->value();
+      label_holder.at(prev_label_index).sk_n15_x = ui->sk_n15x_dsb->value();
+      label_holder.at(prev_label_index).sk_n15_y = ui->sk_n15y_dsb->value();
+      label_holder.at(prev_label_index).sk_n15_z = ui->sk_n15z_dsb->value();
       
 
       // for(int i=0; i < SKELETON_NODE_COUNT; i++)
@@ -455,51 +455,51 @@ PCL_Labeller::onLabelListItemClicked(QListWidgetItem* item)
     ui->rotatez_dsb->setValue(label_holder.at(cur_label_index).rotate_z);
 
     //Joint Tab
-    ui->sk_n1x_dsb->setValue(  label_holder.at(cur_label_index).node[0].x );
-    ui->sk_n1y_dsb->setValue(  label_holder.at(cur_label_index).node[0].y );
-    ui->sk_n1z_dsb->setValue(  label_holder.at(cur_label_index).node[0].z );
-    ui->sk_n2x_dsb->setValue(  label_holder.at(cur_label_index).node[1].x );
-    ui->sk_n2y_dsb->setValue(  label_holder.at(cur_label_index).node[1].y );
-    ui->sk_n2z_dsb->setValue(  label_holder.at(cur_label_index).node[1].z );
-    ui->sk_n3x_dsb->setValue(  label_holder.at(cur_label_index).node[2].x );
-    ui->sk_n3y_dsb->setValue(  label_holder.at(cur_label_index).node[2].y );
-    ui->sk_n3z_dsb->setValue(  label_holder.at(cur_label_index).node[2].z );
-    ui->sk_n4x_dsb->setValue(  label_holder.at(cur_label_index).node[3].x );
-    ui->sk_n4y_dsb->setValue(  label_holder.at(cur_label_index).node[3].y );
-    ui->sk_n4z_dsb->setValue(  label_holder.at(cur_label_index).node[3].z );
-    ui->sk_n5x_dsb->setValue(  label_holder.at(cur_label_index).node[4].x );
-    ui->sk_n5y_dsb->setValue(  label_holder.at(cur_label_index).node[4].y );
-    ui->sk_n5z_dsb->setValue(  label_holder.at(cur_label_index).node[4].z );
-    ui->sk_n6x_dsb->setValue(  label_holder.at(cur_label_index).node[5].x );
-    ui->sk_n6y_dsb->setValue(  label_holder.at(cur_label_index).node[5].y );
-    ui->sk_n6z_dsb->setValue(  label_holder.at(cur_label_index).node[5].z );
-    ui->sk_n7x_dsb->setValue(  label_holder.at(cur_label_index).node[6].x );
-    ui->sk_n7y_dsb->setValue(  label_holder.at(cur_label_index).node[6].y );
-    ui->sk_n7z_dsb->setValue(  label_holder.at(cur_label_index).node[6].z );
-    ui->sk_n8x_dsb->setValue(  label_holder.at(cur_label_index).node[7].x );
-    ui->sk_n8y_dsb->setValue(  label_holder.at(cur_label_index).node[7].y );
-    ui->sk_n8z_dsb->setValue(  label_holder.at(cur_label_index).node[7].z );
-    ui->sk_n9x_dsb->setValue(  label_holder.at(cur_label_index).node[8].x );
-    ui->sk_n9y_dsb->setValue(  label_holder.at(cur_label_index).node[8].y );
-    ui->sk_n9z_dsb->setValue(  label_holder.at(cur_label_index).node[8].z );
-    ui->sk_n10x_dsb->setValue( label_holder.at(cur_label_index).node[9].x );
-    ui->sk_n10y_dsb->setValue( label_holder.at(cur_label_index).node[9].y );
-    ui->sk_n10z_dsb->setValue( label_holder.at(cur_label_index).node[9].z );
-    ui->sk_n11x_dsb->setValue( label_holder.at(cur_label_index).node[10].x);
-    ui->sk_n11y_dsb->setValue( label_holder.at(cur_label_index).node[10].y);
-    ui->sk_n11z_dsb->setValue( label_holder.at(cur_label_index).node[10].z);
-    ui->sk_n12x_dsb->setValue( label_holder.at(cur_label_index).node[11].x);
-    ui->sk_n12y_dsb->setValue( label_holder.at(cur_label_index).node[11].y);
-    ui->sk_n12z_dsb->setValue( label_holder.at(cur_label_index).node[11].z);
-    ui->sk_n13x_dsb->setValue( label_holder.at(cur_label_index).node[12].x);
-    ui->sk_n13y_dsb->setValue( label_holder.at(cur_label_index).node[12].y);
-    ui->sk_n13z_dsb->setValue( label_holder.at(cur_label_index).node[12].z);
-    ui->sk_n14x_dsb->setValue( label_holder.at(cur_label_index).node[13].x);
-    ui->sk_n14y_dsb->setValue( label_holder.at(cur_label_index).node[13].y);
-    ui->sk_n14z_dsb->setValue( label_holder.at(cur_label_index).node[13].z);
-    ui->sk_n15x_dsb->setValue( label_holder.at(cur_label_index).node[14].x);
-    ui->sk_n15z_dsb->setValue( label_holder.at(cur_label_index).node[14].y);
-    ui->sk_n15y_dsb->setValue( label_holder.at(cur_label_index).node[14].z);
+    ui->sk_n1x_dsb->setValue(  label_holder.at(cur_label_index).sk_n1_x );
+    ui->sk_n1y_dsb->setValue(  label_holder.at(cur_label_index).sk_n1_y );
+    ui->sk_n1z_dsb->setValue(  label_holder.at(cur_label_index).sk_n1_z );
+    ui->sk_n2x_dsb->setValue(  label_holder.at(cur_label_index).sk_n2_x );
+    ui->sk_n2y_dsb->setValue(  label_holder.at(cur_label_index).sk_n2_y );
+    ui->sk_n2z_dsb->setValue(  label_holder.at(cur_label_index).sk_n2_z );
+    ui->sk_n3x_dsb->setValue(  label_holder.at(cur_label_index).sk_n3_x );
+    ui->sk_n3y_dsb->setValue(  label_holder.at(cur_label_index).sk_n3_y );
+    ui->sk_n3z_dsb->setValue(  label_holder.at(cur_label_index).sk_n3_z );
+    ui->sk_n4x_dsb->setValue(  label_holder.at(cur_label_index).sk_n4_x );
+    ui->sk_n4y_dsb->setValue(  label_holder.at(cur_label_index).sk_n4_y );
+    ui->sk_n4z_dsb->setValue(  label_holder.at(cur_label_index).sk_n4_z );
+    ui->sk_n5x_dsb->setValue(  label_holder.at(cur_label_index).sk_n5_x );
+    ui->sk_n5y_dsb->setValue(  label_holder.at(cur_label_index).sk_n5_y );
+    ui->sk_n5z_dsb->setValue(  label_holder.at(cur_label_index).sk_n5_z );
+    ui->sk_n6x_dsb->setValue(  label_holder.at(cur_label_index).sk_n6_x );
+    ui->sk_n6y_dsb->setValue(  label_holder.at(cur_label_index).sk_n6_y );
+    ui->sk_n6z_dsb->setValue(  label_holder.at(cur_label_index).sk_n6_z );
+    ui->sk_n7x_dsb->setValue(  label_holder.at(cur_label_index).sk_n7_x );
+    ui->sk_n7y_dsb->setValue(  label_holder.at(cur_label_index).sk_n7_y );
+    ui->sk_n7z_dsb->setValue(  label_holder.at(cur_label_index).sk_n7_z );
+    ui->sk_n8x_dsb->setValue(  label_holder.at(cur_label_index).sk_n8_x );
+    ui->sk_n8y_dsb->setValue(  label_holder.at(cur_label_index).sk_n8_y );
+    ui->sk_n8z_dsb->setValue(  label_holder.at(cur_label_index).sk_n8_z );
+    ui->sk_n9x_dsb->setValue(  label_holder.at(cur_label_index).sk_n9_x );
+    ui->sk_n9y_dsb->setValue(  label_holder.at(cur_label_index).sk_n9_y );
+    ui->sk_n9z_dsb->setValue(  label_holder.at(cur_label_index).sk_n9_z );
+    ui->sk_n10x_dsb->setValue( label_holder.at(cur_label_index).sk_n10_x);
+    ui->sk_n10y_dsb->setValue( label_holder.at(cur_label_index).sk_n10_y);
+    ui->sk_n10z_dsb->setValue( label_holder.at(cur_label_index).sk_n10_z);
+    ui->sk_n11x_dsb->setValue( label_holder.at(cur_label_index).sk_n11_x);
+    ui->sk_n11y_dsb->setValue( label_holder.at(cur_label_index).sk_n11_y);
+    ui->sk_n11z_dsb->setValue( label_holder.at(cur_label_index).sk_n11_z);
+    ui->sk_n12x_dsb->setValue( label_holder.at(cur_label_index).sk_n12_x);
+    ui->sk_n12y_dsb->setValue( label_holder.at(cur_label_index).sk_n12_y);
+    ui->sk_n12z_dsb->setValue( label_holder.at(cur_label_index).sk_n12_z);
+    ui->sk_n13x_dsb->setValue( label_holder.at(cur_label_index).sk_n13_x);
+    ui->sk_n13y_dsb->setValue( label_holder.at(cur_label_index).sk_n13_y);
+    ui->sk_n13z_dsb->setValue( label_holder.at(cur_label_index).sk_n13_z);
+    ui->sk_n14x_dsb->setValue( label_holder.at(cur_label_index).sk_n14_x);
+    ui->sk_n14y_dsb->setValue( label_holder.at(cur_label_index).sk_n14_y);
+    ui->sk_n14z_dsb->setValue( label_holder.at(cur_label_index).sk_n14_z);
+    ui->sk_n15x_dsb->setValue( label_holder.at(cur_label_index).sk_n15_x);
+    ui->sk_n15y_dsb->setValue( label_holder.at(cur_label_index).sk_n15_y);
+    ui->sk_n15z_dsb->setValue( label_holder.at(cur_label_index).sk_n15_z);
       
     
     // for(int i=0; i < SKELETON_NODE_COUNT; i++)
@@ -541,12 +541,51 @@ PCL_Labeller::onInsertLabelButtonClicked()
   newLabel.rotate_x = 0.0;
   newLabel.rotate_y = 0.0;
   newLabel.rotate_z = 0.0;
-  for(int i=0; i < SKELETON_NODE_COUNT; i++)
-  {
-    newLabel.node[i].x = 0.0;
-    newLabel.node[i].y = 0.0;
-    newLabel.node[i].z = 0.0;
-  }
+  newLabel.sk_n1_x  = 0.0;
+  newLabel.sk_n1_y  = 0.0;
+  newLabel.sk_n1_z  = 0.0;
+  newLabel.sk_n2_x  = 0.0;
+  newLabel.sk_n2_y  = 0.0;
+  newLabel.sk_n2_z  = 0.0;
+  newLabel.sk_n3_x  = 0.0;
+  newLabel.sk_n3_y  = 0.0;
+  newLabel.sk_n3_z  = 0.0;
+  newLabel.sk_n4_x  = 0.0;
+  newLabel.sk_n4_y  = 0.0;
+  newLabel.sk_n4_z  = 0.0;
+  newLabel.sk_n5_x  = 0.0;
+  newLabel.sk_n5_y  = 0.0;
+  newLabel.sk_n5_z  = 0.0;
+  newLabel.sk_n6_x  = 0.0;
+  newLabel.sk_n6_y  = 0.0;
+  newLabel.sk_n6_z  = 0.0;
+  newLabel.sk_n7_x  = 0.0;
+  newLabel.sk_n7_y  = 0.0;
+  newLabel.sk_n7_z  = 0.0;
+  newLabel.sk_n8_x  = 0.0;
+  newLabel.sk_n8_y  = 0.0;
+  newLabel.sk_n8_z  = 0.0;
+  newLabel.sk_n9_x  = 0.0;
+  newLabel.sk_n9_y  = 0.0;
+  newLabel.sk_n9_z  = 0.0;
+  newLabel.sk_n10_x = 0.0;
+  newLabel.sk_n10_y = 0.0;
+  newLabel.sk_n10_z = 0.0;
+  newLabel.sk_n11_x = 0.0;
+  newLabel.sk_n11_y = 0.0;
+  newLabel.sk_n11_z = 0.0;
+  newLabel.sk_n12_x = 0.0;
+  newLabel.sk_n12_y = 0.0;
+  newLabel.sk_n12_z = 0.0;
+  newLabel.sk_n13_x = 0.0;
+  newLabel.sk_n13_y = 0.0;
+  newLabel.sk_n13_z = 0.0;
+  newLabel.sk_n14_x = 0.0;
+  newLabel.sk_n14_y = 0.0;
+  newLabel.sk_n14_z = 0.0;
+  newLabel.sk_n15_x = 0.0;
+  newLabel.sk_n15_y = 0.0;
+  newLabel.sk_n15_z = 0.0;
 
   //Insert the new element to the tail of the list
   label_holder.push_back(newLabel);
@@ -608,52 +647,57 @@ PCL_Labeller::onLabelEditFinish()
     label_holder.at(selected_item_index).rotate_z = ui->rotatez_dsb->value();
 
     //Joint Tab
-    label_holder.at(selected_item_index).node[0].x = ui->sk_n1x_dsb->value();
-    label_holder.at(selected_item_index).node[0].y = ui->sk_n1y_dsb->value();
-    label_holder.at(selected_item_index).node[0].z = ui->sk_n1z_dsb->value();
-    label_holder.at(selected_item_index).node[1].x = ui->sk_n2x_dsb->value();
-    label_holder.at(selected_item_index).node[1].y = ui->sk_n2y_dsb->value();
-    label_holder.at(selected_item_index).node[1].z = ui->sk_n2z_dsb->value();
-    label_holder.at(selected_item_index).node[2].x = ui->sk_n3x_dsb->value();
-    label_holder.at(selected_item_index).node[2].y = ui->sk_n3y_dsb->value();
-    label_holder.at(selected_item_index).node[2].z = ui->sk_n3z_dsb->value();
-    label_holder.at(selected_item_index).node[3].x = ui->sk_n4x_dsb->value();
-    label_holder.at(selected_item_index).node[3].y = ui->sk_n4y_dsb->value();
-    label_holder.at(selected_item_index).node[3].z = ui->sk_n4z_dsb->value();
-    label_holder.at(selected_item_index).node[4].x = ui->sk_n5x_dsb->value();
-    label_holder.at(selected_item_index).node[4].y = ui->sk_n5y_dsb->value();
-    label_holder.at(selected_item_index).node[4].z = ui->sk_n5z_dsb->value();
-    label_holder.at(selected_item_index).node[5].x = ui->sk_n6x_dsb->value();
-    label_holder.at(selected_item_index).node[5].y = ui->sk_n6y_dsb->value();
-    label_holder.at(selected_item_index).node[5].z = ui->sk_n6z_dsb->value();
-    label_holder.at(selected_item_index).node[6].x = ui->sk_n7x_dsb->value();
-    label_holder.at(selected_item_index).node[6].y = ui->sk_n7y_dsb->value();
-    label_holder.at(selected_item_index).node[6].z = ui->sk_n7z_dsb->value();
-    label_holder.at(selected_item_index).node[7].x = ui->sk_n8x_dsb->value();
-    label_holder.at(selected_item_index).node[7].y = ui->sk_n8y_dsb->value();
-    label_holder.at(selected_item_index).node[7].z = ui->sk_n8z_dsb->value();
-    label_holder.at(selected_item_index).node[8].x = ui->sk_n9x_dsb->value();
-    label_holder.at(selected_item_index).node[8].y = ui->sk_n9y_dsb->value();
-    label_holder.at(selected_item_index).node[8].z = ui->sk_n9z_dsb->value();
-    label_holder.at(selected_item_index).node[9].x = ui->sk_n10x_dsb->value();
-    label_holder.at(selected_item_index).node[9].y = ui->sk_n10y_dsb->value();
-    label_holder.at(selected_item_index).node[9].z = ui->sk_n10z_dsb->value();
-    label_holder.at(selected_item_index).node[10].x = ui->sk_n11x_dsb->value();
-    label_holder.at(selected_item_index).node[10].y = ui->sk_n11y_dsb->value();
-    label_holder.at(selected_item_index).node[10].z = ui->sk_n11z_dsb->value();
-    label_holder.at(selected_item_index).node[11].x = ui->sk_n12x_dsb->value();
-    label_holder.at(selected_item_index).node[11].y = ui->sk_n12y_dsb->value();
-    label_holder.at(selected_item_index).node[11].z = ui->sk_n12z_dsb->value();
-    label_holder.at(selected_item_index).node[12].x = ui->sk_n13x_dsb->value();
-    label_holder.at(selected_item_index).node[12].y = ui->sk_n13y_dsb->value();
-    label_holder.at(selected_item_index).node[12].z = ui->sk_n13z_dsb->value();
-    label_holder.at(selected_item_index).node[13].x = ui->sk_n14x_dsb->value();
-    label_holder.at(selected_item_index).node[13].y = ui->sk_n14y_dsb->value();
-    label_holder.at(selected_item_index).node[13].z = ui->sk_n14z_dsb->value();
-    label_holder.at(selected_item_index).node[14].x = ui->sk_n15x_dsb->value();
-    label_holder.at(selected_item_index).node[14].y = ui->sk_n15y_dsb->value();
-    label_holder.at(selected_item_index).node[14].z = ui->sk_n15z_dsb->value();
+    label_holder.at(selected_item_index).sk_n1_x  = ui->sk_n1x_dsb->value();
+    label_holder.at(selected_item_index).sk_n1_y  = ui->sk_n1y_dsb->value();
+    label_holder.at(selected_item_index).sk_n1_z  = ui->sk_n1z_dsb->value();
+    label_holder.at(selected_item_index).sk_n2_x  = ui->sk_n2x_dsb->value();
+    label_holder.at(selected_item_index).sk_n2_y  = ui->sk_n2y_dsb->value();
+    label_holder.at(selected_item_index).sk_n2_z  = ui->sk_n2z_dsb->value();
+    label_holder.at(selected_item_index).sk_n3_x  = ui->sk_n3x_dsb->value();
+    label_holder.at(selected_item_index).sk_n3_y  = ui->sk_n3y_dsb->value();
+    label_holder.at(selected_item_index).sk_n3_z  = ui->sk_n3z_dsb->value();
+    label_holder.at(selected_item_index).sk_n4_x  = ui->sk_n4x_dsb->value();
+    label_holder.at(selected_item_index).sk_n4_y  = ui->sk_n4y_dsb->value();
+    label_holder.at(selected_item_index).sk_n4_z  = ui->sk_n4z_dsb->value();
+    label_holder.at(selected_item_index).sk_n5_x  = ui->sk_n5x_dsb->value();
+    label_holder.at(selected_item_index).sk_n5_y  = ui->sk_n5y_dsb->value();
+    label_holder.at(selected_item_index).sk_n5_z  = ui->sk_n5z_dsb->value();
+    label_holder.at(selected_item_index).sk_n6_x  = ui->sk_n6x_dsb->value();
+    label_holder.at(selected_item_index).sk_n6_y  = ui->sk_n6y_dsb->value();
+    label_holder.at(selected_item_index).sk_n6_z  = ui->sk_n6z_dsb->value();
+    label_holder.at(selected_item_index).sk_n7_x  = ui->sk_n7x_dsb->value();
+    label_holder.at(selected_item_index).sk_n7_y  = ui->sk_n7y_dsb->value();
+    label_holder.at(selected_item_index).sk_n7_z  = ui->sk_n7z_dsb->value();
+    label_holder.at(selected_item_index).sk_n8_x  = ui->sk_n8x_dsb->value();
+    label_holder.at(selected_item_index).sk_n8_y  = ui->sk_n8y_dsb->value();
+    label_holder.at(selected_item_index).sk_n8_z  = ui->sk_n8z_dsb->value();
+    label_holder.at(selected_item_index).sk_n9_x  = ui->sk_n9x_dsb->value();
+    label_holder.at(selected_item_index).sk_n9_y  = ui->sk_n9y_dsb->value();
+    label_holder.at(selected_item_index).sk_n9_z  = ui->sk_n9z_dsb->value();
+    label_holder.at(selected_item_index).sk_n10_x = ui->sk_n10x_dsb->value();
+    label_holder.at(selected_item_index).sk_n10_y = ui->sk_n10y_dsb->value();
+    label_holder.at(selected_item_index).sk_n10_z = ui->sk_n10z_dsb->value();
+    label_holder.at(selected_item_index).sk_n11_x = ui->sk_n11x_dsb->value();
+    label_holder.at(selected_item_index).sk_n11_y = ui->sk_n11y_dsb->value();
+    label_holder.at(selected_item_index).sk_n11_z = ui->sk_n11z_dsb->value();
+    label_holder.at(selected_item_index).sk_n12_x = ui->sk_n12x_dsb->value();
+    label_holder.at(selected_item_index).sk_n12_y = ui->sk_n12y_dsb->value();
+    label_holder.at(selected_item_index).sk_n12_z = ui->sk_n12z_dsb->value();
+    label_holder.at(selected_item_index).sk_n13_x = ui->sk_n13x_dsb->value();
+    label_holder.at(selected_item_index).sk_n13_y = ui->sk_n13y_dsb->value();
+    label_holder.at(selected_item_index).sk_n13_z = ui->sk_n13z_dsb->value();
+    label_holder.at(selected_item_index).sk_n14_x = ui->sk_n14x_dsb->value();
+    label_holder.at(selected_item_index).sk_n14_y = ui->sk_n14y_dsb->value();
+    label_holder.at(selected_item_index).sk_n14_z = ui->sk_n14z_dsb->value();
+    label_holder.at(selected_item_index).sk_n15_x = ui->sk_n15x_dsb->value();
+    label_holder.at(selected_item_index).sk_n15_y = ui->sk_n15y_dsb->value();
+    label_holder.at(selected_item_index).sk_n15_z = ui->sk_n15z_dsb->value();
 
+
+    std::cout << "UI label: "  << std::endl;
+    std::cout << "UI.sk_n15_x: " << label_holder.at(selected_item_index).sk_n15_x << std::endl;
+    std::cout << "UI.sk_n15_y: " << label_holder.at(selected_item_index).sk_n15_y << std::endl;
+    std::cout << "UI.sk_n15_z: " << label_holder.at(selected_item_index).sk_n15_z << std::endl;
     // for(int i=0; i < SKELETON_NODE_COUNT; i++)
     // {
     //   label_holder.at(selected_item_index).node[i].x = ui_sk_storage[i*3]->value();
@@ -772,8 +816,8 @@ PCL_Labeller::clearLabelUI()
   ui->sk_n14y_dsb->setValue(0.0);
   ui->sk_n14z_dsb->setValue(0.0);
   ui->sk_n15x_dsb->setValue(0.0);
-  ui->sk_n15z_dsb->setValue(0.0);
   ui->sk_n15y_dsb->setValue(0.0);
+  ui->sk_n15z_dsb->setValue(0.0);
   // for(int i; i < SKELETON_NODE_COUNT*3; i++)
   //     ui_sk_storage[i]->setValue(0.0);
   labelUI_Signal_enable(true);//Important, enable back the signal
@@ -1016,10 +1060,12 @@ PCL_Labeller::read_label() //Read the label of the current pointcloud
     statusBar()->showMessage(tr(CAN_OPEN_LABEL)+cur_label_file);
     statusBar()->showMessage(tr(LOADING_LABEL_FILE)+cur_label_file);
     std::string line;
-    std::istringstream iss;
+  
     for(int i=0;std::getline(label_file, line);i++)
     {
-        iss.str(line);//Convert each line in the file to a string stream
+        //iss.str(line);
+        std::cout << "The line: " << std::endl << line << std::endl << std::endl;
+        std::istringstream iss(line);//Convert each line in the file to a string stream
         HSTM_Label label_in_file;
 
         //Get the normal information
@@ -1034,51 +1080,51 @@ PCL_Labeller::read_label() //Read the label of the current pointcloud
               >> label_in_file.rotate_x
               >> label_in_file.rotate_y
               >> label_in_file.rotate_z
-              // >> label_in_file.node[0].x
-              // >> label_in_file.node[0].y
-              // >> label_in_file.node[0].z
-              // >> label_in_file.node[1].x
-              // >> label_in_file.node[1].y
-              // >> label_in_file.node[1].z
-              // >> label_in_file.node[2].x
-              // >> label_in_file.node[2].y
-              // >> label_in_file.node[2].z
-              // >> label_in_file.node[3].x
-              // >> label_in_file.node[3].y
-              // >> label_in_file.node[3].z
-              // >> label_in_file.node[4].x
-              // >> label_in_file.node[4].y
-              // >> label_in_file.node[4].z
-              // >> label_in_file.node[5].x
-              // >> label_in_file.node[5].y
-              // >> label_in_file.node[5].z
-              // >> label_in_file.node[6].x
-              // >> label_in_file.node[6].y
-              // >> label_in_file.node[6].z
-              // >> label_in_file.node[7].x
-              // >> label_in_file.node[7].y
-              // >> label_in_file.node[7].z
-              // >> label_in_file.node[8].x
-              // >> label_in_file.node[8].y
-              // >> label_in_file.node[8].z
-              // >> label_in_file.node[9].x
-              // >> label_in_file.node[9].y
-              // >> label_in_file.node[9].z
-              // >> label_in_file.node[10].x
-              // >> label_in_file.node[10].y
-              // >> label_in_file.node[10].z
-              // >> label_in_file.node[11].x
-              // >> label_in_file.node[11].y
-              // >> label_in_file.node[11].z
-              // >> label_in_file.node[12].x
-              // >> label_in_file.node[12].y
-              // >> label_in_file.node[12].z
-              // >> label_in_file.node[13].x
-              // >> label_in_file.node[13].y
-              // >> label_in_file.node[13].z
-              // >> label_in_file.node[14].x
-              // >> label_in_file.node[14].y
-              // >> label_in_file.node[14].z
+              >> label_in_file.sk_n1_x 
+              >> label_in_file.sk_n1_y 
+              >> label_in_file.sk_n1_z 
+              >> label_in_file.sk_n2_x 
+              >> label_in_file.sk_n2_y 
+              >> label_in_file.sk_n2_z 
+              >> label_in_file.sk_n3_x 
+              >> label_in_file.sk_n3_y 
+              >> label_in_file.sk_n3_z 
+              >> label_in_file.sk_n4_x 
+              >> label_in_file.sk_n4_y 
+              >> label_in_file.sk_n4_z 
+              >> label_in_file.sk_n5_x 
+              >> label_in_file.sk_n5_y 
+              >> label_in_file.sk_n5_z 
+              >> label_in_file.sk_n6_x 
+              >> label_in_file.sk_n6_y 
+              >> label_in_file.sk_n6_z 
+              >> label_in_file.sk_n7_x 
+              >> label_in_file.sk_n7_y 
+              >> label_in_file.sk_n7_z 
+              >> label_in_file.sk_n8_x 
+              >> label_in_file.sk_n8_y 
+              >> label_in_file.sk_n8_z 
+              >> label_in_file.sk_n9_x 
+              >> label_in_file.sk_n9_y 
+              >> label_in_file.sk_n9_z 
+              >> label_in_file.sk_n10_x
+              >> label_in_file.sk_n10_y
+              >> label_in_file.sk_n10_z
+              >> label_in_file.sk_n11_x
+              >> label_in_file.sk_n11_y
+              >> label_in_file.sk_n11_z
+              >> label_in_file.sk_n12_x
+              >> label_in_file.sk_n12_y
+              >> label_in_file.sk_n12_z
+              >> label_in_file.sk_n13_x
+              >> label_in_file.sk_n13_y
+              >> label_in_file.sk_n13_z
+              >> label_in_file.sk_n14_x
+              >> label_in_file.sk_n14_y
+              >> label_in_file.sk_n14_z
+              >> label_in_file.sk_n15_x
+              >> label_in_file.sk_n15_y
+              >> label_in_file.sk_n15_z
             )   
           )
         { // error
@@ -1098,52 +1144,74 @@ PCL_Labeller::read_label() //Read the label of the current pointcloud
             return 2; 
           }        
         }
+
+        std::cout << "Data Dump: " << std::endl;
+        std::cout << "label_in_file.name     : " << label_in_file.name  << std::endl;
+        std::cout << "label_in_file.center_x : " << label_in_file.center_x << std::endl;
+        std::cout << "label_in_file.center_y : " << label_in_file.center_y << std::endl;
+        std::cout << "label_in_file.center_z : " << label_in_file.center_z << std::endl;
+        std::cout << "label_in_file.x_size   : " << label_in_file.x_size << std::endl;
+        std::cout << "label_in_file.y_size   : " << label_in_file.y_size << std::endl;
+        std::cout << "label_in_file.z_size   : " << label_in_file.z_size << std::endl;
+        std::cout << "label_in_file.rotate_x : " << label_in_file.rotate_x << std::endl;
+        std::cout << "label_in_file.rotate_y : " << label_in_file.rotate_y << std::endl;
+        std::cout << "label_in_file.rotate_z : " << label_in_file.rotate_z << std::endl;
+
+        std::cout << "label_in_file.sk_n1_x  : " << label_in_file.sk_n1_x << std::endl;
+        std::cout << "label_in_file.sk_n1_y  : " << label_in_file.sk_n1_y << std::endl;
+        std::cout << "label_in_file.sk_n1_z  : " << label_in_file.sk_n1_z << std::endl;
+        std::cout << "label_in_file.sk_n2_x  : " << label_in_file.sk_n2_x << std::endl;
+        std::cout << "label_in_file.sk_n2_y  : " << label_in_file.sk_n2_y << std::endl;
+        std::cout << "label_in_file.sk_n2_z  : " << label_in_file.sk_n2_z << std::endl;
+
+        std::cout << "label_in_file.sk_n3_x  : " << label_in_file.sk_n3_x << std::endl;
+        std::cout << "label_in_file.sk_n3_y  : " << label_in_file.sk_n3_y << std::endl;
+        std::cout << "label_in_file.sk_n3_z  : " << label_in_file.sk_n3_z << std::endl;
+        std::cout << "label_in_file.sk_n4_x  : " << label_in_file.sk_n4_x << std::endl;
+        std::cout << "label_in_file.sk_n4_y  : " << label_in_file.sk_n4_y << std::endl;
+        std::cout << "label_in_file.sk_n4_z  : " << label_in_file.sk_n4_z << std::endl;
+
+        std::cout << "label_in_file.sk_n5_x  : " << label_in_file.sk_n5_x << std::endl;
+        std::cout << "label_in_file.sk_n5_y  : " << label_in_file.sk_n5_y << std::endl;
+        std::cout << "label_in_file.sk_n5_z  : " << label_in_file.sk_n5_z << std::endl;
+        std::cout << "label_in_file.sk_n6_x  : " << label_in_file.sk_n6_x << std::endl;
+        std::cout << "label_in_file.sk_n6_y  : " << label_in_file.sk_n6_y << std::endl;
+        std::cout << "label_in_file.sk_n6_z  : " << label_in_file.sk_n6_z << std::endl;
+
+        std::cout << "label_in_file.sk_n7_x  : " << label_in_file.sk_n7_x << std::endl;
+        std::cout << "label_in_file.sk_n7_y  : " << label_in_file.sk_n7_y << std::endl;
+        std::cout << "label_in_file.sk_n7_z  : " << label_in_file.sk_n7_z << std::endl;
+        std::cout << "label_in_file.sk_n8_x  : " << label_in_file.sk_n8_x << std::endl;
+        std::cout << "label_in_file.sk_n8_y  : " << label_in_file.sk_n8_y << std::endl;
+        std::cout << "label_in_file.sk_n8_z  : " << label_in_file.sk_n8_z << std::endl;
+
+        std::cout << "label_in_file.sk_n9_x  : " << label_in_file.sk_n9_x << std::endl;
+        std::cout << "label_in_file.sk_n9_y  : " << label_in_file.sk_n9_y << std::endl;
+        std::cout << "label_in_file.sk_n9_z  : " << label_in_file.sk_n9_z << std::endl;
+        std::cout << "label_in_file.sk_n10_x  : " << label_in_file.sk_n10_x << std::endl;
+        std::cout << "label_in_file.sk_n10_y  : " << label_in_file.sk_n10_y << std::endl;
+        std::cout << "label_in_file.sk_n10_z  : " << label_in_file.sk_n10_z << std::endl;
+    
+
+        std::cout << "label_in_file.sk_n11_x: " << label_in_file.sk_n11_x << std::endl;
+        std::cout << "label_in_file.sk_n11_y: " << label_in_file.sk_n11_y << std::endl;
+        std::cout << "label_in_file.sk_n11_z: " << label_in_file.sk_n11_z << std::endl;
+        std::cout << "label_in_file.sk_n12_x: " << label_in_file.sk_n12_x << std::endl;
+        std::cout << "label_in_file.sk_n12_y: " << label_in_file.sk_n12_y << std::endl;
+        std::cout << "label_in_file.sk_n12_z: " << label_in_file.sk_n12_z << std::endl;
+
+
+        std::cout << "label_in_file.sk_n13_x: " << label_in_file.sk_n13_x << std::endl;
+        std::cout << "label_in_file.sk_n13_y: " << label_in_file.sk_n13_y << std::endl;
+        std::cout << "label_in_file.sk_n13_z: " << label_in_file.sk_n13_z << std::endl;
+        std::cout << "label_in_file.sk_n14_x: " << label_in_file.sk_n14_x << std::endl;
+        std::cout << "label_in_file.sk_n14_y: " << label_in_file.sk_n14_y << std::endl;
+        std::cout << "label_in_file.sk_n14_z: " << label_in_file.sk_n14_z << std::endl;
+
+        std::cout << "label_in_file.sk_n15_x: " << label_in_file.sk_n15_x << std::endl;
+        std::cout << "label_in_file.sk_n15_y: " << label_in_file.sk_n15_y << std::endl;
+        std::cout << "label_in_file.sk_n15_z: " << label_in_file.sk_n15_z << std::endl;
         //Insert the readed label data to the label holder
-        label_in_file.node[0].x  = 0.0;
-        label_in_file.node[0].y  = 0.0;
-        label_in_file.node[0].z  = 0.0;
-        label_in_file.node[1].x  = 0.0;
-        label_in_file.node[1].y  = 0.0;
-        label_in_file.node[1].z  = 0.0;
-        label_in_file.node[2].x  = 0.0;
-        label_in_file.node[2].y  = 0.0;
-        label_in_file.node[2].z  = 0.0;
-        label_in_file.node[3].x  = 0.0;
-        label_in_file.node[3].y  = 0.0;
-        label_in_file.node[3].z  = 0.0;
-        label_in_file.node[4].x  = 0.0;
-        label_in_file.node[4].y  = 0.0;
-        label_in_file.node[4].z  = 0.0;
-        label_in_file.node[5].x  = 0.0;
-        label_in_file.node[5].y  = 0.0;
-        label_in_file.node[5].z  = 0.0;
-        label_in_file.node[6].x  = 0.0;
-        label_in_file.node[6].y  = 0.0;
-        label_in_file.node[6].z  = 0.0;
-        label_in_file.node[7].x  = 0.0;
-        label_in_file.node[7].y  = 0.0;
-        label_in_file.node[7].z  = 0.0;
-        label_in_file.node[8].x  = 0.0;
-        label_in_file.node[8].y  = 0.0;
-        label_in_file.node[8].z  = 0.0;
-        label_in_file.node[9].x  = 0.0;
-        label_in_file.node[9].y  = 0.0;
-        label_in_file.node[9].z  = 0.0;
-        label_in_file.node[10].x = 0.0;
-        label_in_file.node[10].y = 0.0;
-        label_in_file.node[10].z = 0.0;
-        label_in_file.node[11].x = 0.0;
-        label_in_file.node[11].y = 0.0;
-        label_in_file.node[11].z = 0.0;
-        label_in_file.node[12].x = 0.0;
-        label_in_file.node[12].y = 0.0;
-        label_in_file.node[12].z = 0.0;
-        label_in_file.node[13].x = 0.0;
-        label_in_file.node[13].y = 0.0;
-        label_in_file.node[13].z = 0.0;
-        label_in_file.node[14].x = 0.0;
-        label_in_file.node[14].y = 0.0;
-        label_in_file.node[14].z = 0.0;
         label_holder.push_back(label_in_file);//Save the data
         
     }//END-while() getline
@@ -1184,6 +1252,7 @@ PCL_Labeller::write_label()
   statusBar()->showMessage(tr(SAVING_LABEL)+cur_label_file);
   if(label_file.is_open())
   {
+
     for(HSTM_Label item: label_holder)
     {
       label_file
@@ -1196,52 +1265,52 @@ PCL_Labeller::write_label()
       << item.z_size << ' '
       << item.rotate_x << ' '
       << item.rotate_y << ' '
-      << item.rotate_z << '\n';
-      // << item.node[0].x << ' '
-      // << item.node[0].y << ' '
-      // << item.node[0].z << ' '
-      // << item.node[1].x << ' '
-      // << item.node[1].y << ' '
-      // << item.node[1].z << ' '
-      // << item.node[2].x << ' '
-      // << item.node[2].y << ' '
-      // << item.node[2].z << ' '
-      // << item.node[3].x << ' '
-      // << item.node[3].y << ' '
-      // << item.node[3].z << ' '
-      // << item.node[4].x << ' '
-      // << item.node[4].y << ' '
-      // << item.node[4].z << ' '
-      // << item.node[5].x << ' '
-      // << item.node[5].y << ' '
-      // << item.node[5].z << ' '
-      // << item.node[6].x << ' '
-      // << item.node[6].y << ' '
-      // << item.node[6].z << ' '
-      // << item.node[7].x << ' '
-      // << item.node[7].y << ' '
-      // << item.node[7].z << ' '
-      // << item.node[8].x << ' '
-      // << item.node[8].y << ' '
-      // << item.node[8].z << ' '
-      // << item.node[9].x << ' '
-      // << item.node[9].y << ' '
-      // << item.node[9].z << ' '
-      // << item.node[10].x << ' '
-      // << item.node[10].y << ' '
-      // << item.node[10].z << ' '
-      // << item.node[11].x << ' '
-      // << item.node[11].y << ' '
-      // << item.node[11].z << ' '
-      // << item.node[12].x << ' '
-      // << item.node[12].y << ' '
-      // << item.node[12].z << ' '
-      // << item.node[13].x << ' '
-      // << item.node[13].y << ' '
-      // << item.node[13].z << ' '
-      // << item.node[14].x << ' '
-      // << item.node[14].y << ' '
-      // << item.node[14].z <<  std::endl;
+      << item.rotate_z << ' '
+      << item.sk_n1_x  << ' '
+      << item.sk_n1_y  << ' '
+      << item.sk_n1_z  << ' '
+      << item.sk_n2_x  << ' '
+      << item.sk_n2_y  << ' '
+      << item.sk_n2_z  << ' '
+      << item.sk_n3_x  << ' '
+      << item.sk_n3_y  << ' '
+      << item.sk_n3_z  << ' '
+      << item.sk_n4_x  << ' '
+      << item.sk_n4_y  << ' '
+      << item.sk_n4_z  << ' '
+      << item.sk_n5_x  << ' '
+      << item.sk_n5_y  << ' '
+      << item.sk_n5_z  << ' '
+      << item.sk_n6_x  << ' '
+      << item.sk_n6_y  << ' '
+      << item.sk_n6_z  << ' '
+      << item.sk_n7_x  << ' '
+      << item.sk_n7_y  << ' '
+      << item.sk_n7_z  << ' '
+      << item.sk_n8_x  << ' '
+      << item.sk_n8_y  << ' '
+      << item.sk_n8_z  << ' '
+      << item.sk_n9_x  << ' '
+      << item.sk_n9_y  << ' '
+      << item.sk_n9_z  << ' '
+      << item.sk_n10_x << ' '
+      << item.sk_n10_y << ' '
+      << item.sk_n10_z << ' '
+      << item.sk_n11_x << ' '
+      << item.sk_n11_y << ' '
+      << item.sk_n11_z << ' '
+      << item.sk_n12_x << ' '
+      << item.sk_n12_y << ' '
+      << item.sk_n12_z << ' '
+      << item.sk_n13_x << ' '
+      << item.sk_n13_y << ' '
+      << item.sk_n13_z << ' '
+      << item.sk_n14_x << ' '
+      << item.sk_n14_y << ' '
+      << item.sk_n14_z << ' '
+      << item.sk_n15_x << ' '
+      << item.sk_n15_y << ' '
+      << item.sk_n15_z << '\n';
 
       // for(int i=0; i < SKELETON_NODE_COUNT; i++)
       // {

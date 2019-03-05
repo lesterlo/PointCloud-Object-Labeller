@@ -25,15 +25,6 @@
 //   double rotation_y;
 // } KITTI_Label;
 
-typedef struct
-{
-  double x;
-  double y;
-  double z;
-} SK_node;
-
-
-
 //(.hst)Human Skeleton Tracking Model Label
 typedef struct
 {
@@ -47,7 +38,52 @@ typedef struct
   double rotate_x;
   double rotate_y;
   double rotate_z;
-  SK_node node[SKELETON_NODE_COUNT];
+
+  double sk_n1_x;
+  double sk_n1_y;
+  double sk_n1_z;
+  double sk_n2_x;
+  double sk_n2_y;
+  double sk_n2_z;
+  double sk_n3_x;
+  double sk_n3_y;
+  double sk_n3_z;
+  double sk_n4_x;
+  double sk_n4_y;
+  double sk_n4_z;
+  double sk_n5_x;
+  double sk_n5_y;
+  double sk_n5_z;
+  double sk_n6_x;
+  double sk_n6_y;
+  double sk_n6_z;
+  double sk_n7_x;
+  double sk_n7_y;
+  double sk_n7_z;
+  double sk_n8_x;
+  double sk_n8_y;
+  double sk_n8_z;
+  double sk_n9_x;
+  double sk_n9_y;
+  double sk_n9_z;
+  double sk_n10_x;
+  double sk_n10_y;
+  double sk_n10_z;
+  double sk_n11_x;
+  double sk_n11_y;
+  double sk_n11_z;
+  double sk_n12_x;
+  double sk_n12_y;
+  double sk_n12_z;
+  double sk_n13_x;
+  double sk_n13_y;
+  double sk_n13_z;
+  double sk_n14_x;
+  double sk_n14_y;
+  double sk_n14_z;
+  double sk_n15_x;
+  double sk_n15_y;
+  double sk_n15_z;
 } HSTM_Label;
 
 #endif
