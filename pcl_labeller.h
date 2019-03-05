@@ -84,6 +84,7 @@ private:
   void createActions();
   void createMenus();
   void contextMenuEvent(QContextMenuEvent *event);
+  void prepareUI();
   
   //QMenu
   QMenu *fileMenu;
@@ -101,6 +102,7 @@ private:
   //C std Area
   std::vector<HSTM_Label> label_holder;
   int prev_label_index; //For save label
+  // QDoubleSpinBox* ui_sk_storage[SKELETON_NODE_COUNT * 3];
 
 };
 
