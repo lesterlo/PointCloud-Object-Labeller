@@ -865,7 +865,7 @@ PCL_Labeller::drawAllLabel(int highlisted_index)
           Eigen::AngleAxisf(TO_RAD(item.rotate_y), Eigen::Vector3f::UnitY()) * 
           Eigen::AngleAxisf(TO_RAD(item.rotate_z), Eigen::Vector3f::UnitZ())
         ),
-        std::to_string(render_id)//Specific ID
+        "cs_"+std::to_string(render_id)//Specific ID, for coordinateSystem (cs_)
       );
     //Draw the bounding cube
     viewer->addCube(
@@ -882,23 +882,23 @@ PCL_Labeller::drawAllLabel(int highlisted_index)
       item.x_size, //width
       item.y_size, //Height
       item.z_size,   //Depth
-      std::to_string(render_id)//Specific ID
+      "bb_"+std::to_string(render_id)//Specific ID, for bounding box (bb_)
     );
     //Make the cube to wireframe
     viewer->setShapeRenderingProperties(pcl::visualization::PCL_VISUALIZER_REPRESENTATION, 
       pcl::visualization::PCL_VISUALIZER_REPRESENTATION_WIREFRAME, 
-      std::to_string(render_id));
+      "bb_"+std::to_string(render_id));
     //Make the cube to red/green depends on the selected item
     viewer->setShapeRenderingProperties(pcl::visualization::PCL_VISUALIZER_COLOR, 
-      render_id == highlisted_index ? 0.0:1.0, //R
-      render_id == highlisted_index ? 1.0:0.0, //G
-      0.0, //B
-      std::to_string(render_id)
+      render_id == highlisted_index ? 0.0:1.0, //Red Color
+      render_id == highlisted_index ? 1.0:0.0, //Green Color
+      0.0, //Blue Color
+      "bb_"+std::to_string(render_id)//Use the spcific ID, for bounding box (bb_)
     );
     //Set the Wireframe line width
     viewer->setShapeRenderingProperties(pcl::visualization::PCL_VISUALIZER_LINE_WIDTH, 
       BCUBE_LINEWIDTH, //Line Width
-      std::to_string(render_id)
+      "bb_"+std::to_string(render_id)//Use the spcific ID, for bounding box (bb_)
     );
     // viewer->addText3D(
     //   item.name, 
@@ -914,6 +914,25 @@ PCL_Labeller::drawAllLabel(int highlisted_index)
     // );//Add anotation Text
     
     //Render the Skeleton
+    bool drawSkeleton = true;
+    if (drawSkeleton)
+    {
+      viewer->addSphere(
+        pcl::PointXYZ(
+          //Add Translation and Rotation to the skeleton node
+          item.center_x + item.sk_n1_x, 
+          item.center_y + item.sk_n1_y, 
+          item.center_z + item.sk_n1_z
+        ),
+        SK_NODE_SIZE, //Radius of the sphere
+        render_id == highlisted_index ? 0.0:1.0, //Red Color
+        render_id == highlisted_index ? 1.0:0.0, //Green Color
+        0.0, //Blue color
+        "sk1_"+std::to_string(render_id)
+      );
+
+
+    }
     
     render_id++;//Inrement the id counter
   }
