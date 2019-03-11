@@ -917,12 +917,29 @@ PCL_Labeller::drawAllLabel(int highlisted_index)
     bool drawSkeleton = true;
     if (drawSkeleton)
     {
+      Eigen::Vector3f sk1_shift = 
+        Eigen::Quaternionf( //Rotation of the point
+          Eigen::AngleAxisf(TO_RAD(item.rotate_x), Eigen::Vector3f::UnitX()) * 
+          Eigen::AngleAxisf(TO_RAD(item.rotate_y), Eigen::Vector3f::UnitY()) * 
+          Eigen::AngleAxisf(TO_RAD(item.rotate_z), Eigen::Vector3f::UnitZ())  
+        )*
+        Eigen::Vector3f( //Translation from the local coordinate of skeleton node
+          item.sk_n1_x, 
+          item.sk_n1_y, 
+          item.sk_n1_z
+        )+ 
+        Eigen::Vector3f( //Translation of center of the bounding box
+          item.center_x, 
+          item.center_y, 
+          item.center_z
+        );
+
       viewer->addSphere(
         pcl::PointXYZ(
-          //Add Translation and Rotation to the skeleton node
-          item.center_x + item.sk_n1_x, 
-          item.center_y + item.sk_n1_y, 
-          item.center_z + item.sk_n1_z
+          //Apply The Vector to the pointxyz
+          sk1_shift(0), 
+          sk1_shift(1), 
+          sk1_shift(2)
         ),
         SK_NODE_SIZE, //Radius of the sphere
         render_id == highlisted_index ? 0.0:1.0, //Red Color
