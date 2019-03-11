@@ -849,54 +849,58 @@ PCL_Labeller::drawAllLabel(int highlisted_index)
   viewer->addCoordinateSystem(); //Add the Center Axis
   for(HSTM_Label item : label_holder)
   {
+    //Get common element
+    //Rotation
+    Eigen::Quaternionf box_rotate = Eigen::Quaternionf( //Rotation of the Cube
+        Eigen::AngleAxisf(TO_RAD(item.rotate_x), Eigen::Vector3f::UnitX()) * 
+        Eigen::AngleAxisf(TO_RAD(item.rotate_y), Eigen::Vector3f::UnitY()) * 
+        Eigen::AngleAxisf(TO_RAD(item.rotate_z), Eigen::Vector3f::UnitZ())  
+      );
+    //Translation
+    Eigen::Vector3f box_vector = Eigen::Vector3f( 
+        //Translation of center of the bounding box
+          item.center_x, 
+          item.center_y, 
+          item.center_z
+        );
     //Draw the Reference 3D axis
     if(render_id == highlisted_index)
       viewer->addCoordinateSystem(
         REF_AXIS_WIDTH, //Scale size
         Eigen::Affine3f( //Add Pose
-          //Add translation
-          Eigen::Translation3f( 
-            item.center_x, 
-            item.center_y, 
-            item.center_z
-          ) *
-          //Add X, Y, Z rotation
-          Eigen::AngleAxisf(TO_RAD(item.rotate_x), Eigen::Vector3f::UnitX()) * 
-          Eigen::AngleAxisf(TO_RAD(item.rotate_y), Eigen::Vector3f::UnitY()) * 
-          Eigen::AngleAxisf(TO_RAD(item.rotate_z), Eigen::Vector3f::UnitZ())
+          Eigen::Translation3f(box_vector) * //Add translation
+          box_rotate//Add X, Y, Z rotation
         ),
         "cs_"+std::to_string(render_id)//Specific ID, for coordinateSystem (cs_)
       );
     //Draw the bounding cube
     viewer->addCube(
-      Eigen::Vector3f( //Translation of center
-        item.center_x, 
-        item.center_y, 
-        item.center_z
-      ), 
-      Eigen::Quaternionf( //Rotation of the Cube
-        Eigen::AngleAxisf(TO_RAD(item.rotate_x), Eigen::Vector3f::UnitX()) * 
-        Eigen::AngleAxisf(TO_RAD(item.rotate_y), Eigen::Vector3f::UnitY()) * 
-        Eigen::AngleAxisf(TO_RAD(item.rotate_z), Eigen::Vector3f::UnitZ())  
-      ),
+      box_vector,  //Ceter of the Box
+      box_rotate,  //Rotation of the Box
       item.x_size, //width
       item.y_size, //Height
-      item.z_size,   //Depth
+      item.z_size, //Depth
       "bb_"+std::to_string(render_id)//Specific ID, for bounding box (bb_)
     );
+
     //Make the cube to wireframe
-    viewer->setShapeRenderingProperties(pcl::visualization::PCL_VISUALIZER_REPRESENTATION, 
+    viewer->setShapeRenderingProperties(
+      pcl::visualization::PCL_VISUALIZER_REPRESENTATION, 
       pcl::visualization::PCL_VISUALIZER_REPRESENTATION_WIREFRAME, 
-      "bb_"+std::to_string(render_id));
+      "bb_"+std::to_string(render_id)
+    );
+
     //Make the cube to red/green depends on the selected item
-    viewer->setShapeRenderingProperties(pcl::visualization::PCL_VISUALIZER_COLOR, 
+    viewer->setShapeRenderingProperties(
+      pcl::visualization::PCL_VISUALIZER_COLOR, 
       render_id == highlisted_index ? 0.0:1.0, //Red Color
       render_id == highlisted_index ? 1.0:0.0, //Green Color
       0.0, //Blue Color
       "bb_"+std::to_string(render_id)//Use the spcific ID, for bounding box (bb_)
     );
     //Set the Wireframe line width
-    viewer->setShapeRenderingProperties(pcl::visualization::PCL_VISUALIZER_LINE_WIDTH, 
+    viewer->setShapeRenderingProperties(
+      pcl::visualization::PCL_VISUALIZER_LINE_WIDTH, 
       BCUBE_LINEWIDTH, //Line Width
       "bb_"+std::to_string(render_id)//Use the spcific ID, for bounding box (bb_)
     );
@@ -918,21 +922,13 @@ PCL_Labeller::drawAllLabel(int highlisted_index)
     if (drawSkeleton)
     {
       Eigen::Vector3f sk1_shift = 
-        Eigen::Quaternionf( //Rotation of the point
-          Eigen::AngleAxisf(TO_RAD(item.rotate_x), Eigen::Vector3f::UnitX()) * 
-          Eigen::AngleAxisf(TO_RAD(item.rotate_y), Eigen::Vector3f::UnitY()) * 
-          Eigen::AngleAxisf(TO_RAD(item.rotate_z), Eigen::Vector3f::UnitZ())  
-        )*
+        box_rotate * 
         Eigen::Vector3f( //Translation from the local coordinate of skeleton node
           item.sk_n1_x, 
           item.sk_n1_y, 
           item.sk_n1_z
-        )+ 
-        Eigen::Vector3f( //Translation of center of the bounding box
-          item.center_x, 
-          item.center_y, 
-          item.center_z
-        );
+        ) + 
+        box_vector; //Translation of center of the bounding box
 
       viewer->addSphere(
         pcl::PointXYZ(
