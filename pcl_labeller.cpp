@@ -921,6 +921,7 @@ PCL_Labeller::drawAllLabel(int highlisted_index)
     bool drawSkeleton = true;
     if (drawSkeleton)
     {
+      //Sk1
       Eigen::Vector3f sk1_shift = 
         box_rotate * 
         Eigen::Vector3f( //Translation from the local coordinate of skeleton node
@@ -942,6 +943,342 @@ PCL_Labeller::drawAllLabel(int highlisted_index)
         render_id == highlisted_index ? 1.0:0.0, //Green Color
         0.0, //Blue color
         "sk1_"+std::to_string(render_id)
+      );
+
+      //Sk2
+      Eigen::Vector3f sk2_shift = 
+        box_rotate * 
+        Eigen::Vector3f( //Translation from the local coordinate of skeleton node
+          item.sk_n2_x, 
+          item.sk_n2_y, 
+          item.sk_n2_z
+        ) + 
+        box_vector; //Translation of center of the bounding box
+
+      viewer->addSphere(
+        pcl::PointXYZ(
+          //Apply The Vector to the pointxyz
+          sk2_shift(0), 
+          sk2_shift(1), 
+          sk2_shift(2)
+        ),
+        SK_NODE_SIZE, //Radius of the sphere
+        render_id == highlisted_index ? 0.0:1.0, //Red Color
+        render_id == highlisted_index ? 1.0:0.0, //Green Color
+        0.0, //Blue color
+        "sk2_"+std::to_string(render_id)
+      );
+
+      //Sk3
+      Eigen::Vector3f sk3_shift = 
+        box_rotate * 
+        Eigen::Vector3f( //Translation from the local coordinate of skeleton node
+          item.sk_n3_x, 
+          item.sk_n3_y, 
+          item.sk_n3_z
+        ) + 
+        box_vector; //Translation of center of the bounding box
+
+      viewer->addSphere(
+        pcl::PointXYZ(
+          //Apply The Vector to the pointxyz
+          sk3_shift(0), 
+          sk3_shift(1), 
+          sk3_shift(2)
+        ),
+        SK_NODE_SIZE, //Radius of the sphere
+        render_id == highlisted_index ? 0.0:1.0, //Red Color
+        render_id == highlisted_index ? 1.0:0.0, //Green Color
+        0.0, //Blue color
+        "sk3_"+std::to_string(render_id)
+      );
+
+      //Sk4
+      Eigen::Vector3f sk4_shift = 
+        box_rotate * 
+        Eigen::Vector3f( //Translation from the local coordinate of skeleton node
+          item.sk_n4_x, 
+          item.sk_n4_y, 
+          item.sk_n4_z
+        ) + 
+        box_vector; //Translation of center of the bounding box
+
+      viewer->addSphere(
+        pcl::PointXYZ(
+          //Apply The Vector to the pointxyz
+          sk4_shift(0), 
+          sk4_shift(1), 
+          sk4_shift(2)
+        ),
+        SK_NODE_SIZE, //Radius of the sphere
+        render_id == highlisted_index ? 0.0:1.0, //Red Color
+        render_id == highlisted_index ? 1.0:0.0, //Green Color
+        0.0, //Blue color
+        "sk4_"+std::to_string(render_id)
+      );
+
+      //Sk5
+      Eigen::Vector3f sk5_shift = 
+        box_rotate * 
+        Eigen::Vector3f( //Translation from the local coordinate of skeleton node
+          item.sk_n5_x, 
+          item.sk_n5_y, 
+          item.sk_n5_z
+        ) + 
+        box_vector; //Translation of center of the bounding box
+
+      viewer->addSphere(
+        pcl::PointXYZ(
+          //Apply The Vector to the pointxyz
+          sk5_shift(0), 
+          sk5_shift(1), 
+          sk5_shift(2)
+        ),
+        SK_NODE_SIZE, //Radius of the sphere
+        render_id == highlisted_index ? 0.0:1.0, //Red Color
+        render_id == highlisted_index ? 1.0:0.0, //Green Color
+        0.0, //Blue color
+        "sk5_"+std::to_string(render_id)
+      );
+
+      //Sk6
+      Eigen::Vector3f sk6_shift = 
+        box_rotate * 
+        Eigen::Vector3f( //Translation from the local coordinate of skeleton node
+          item.sk_n6_x, 
+          item.sk_n6_y, 
+          item.sk_n6_z
+        ) + 
+        box_vector; //Translation of center of the bounding box
+
+      viewer->addSphere(
+        pcl::PointXYZ(
+          //Apply The Vector to the pointxyz
+          sk6_shift(0), 
+          sk6_shift(1), 
+          sk6_shift(2)
+        ),
+        SK_NODE_SIZE, //Radius of the sphere
+        render_id == highlisted_index ? 0.0:1.0, //Red Color
+        render_id == highlisted_index ? 1.0:0.0, //Green Color
+        0.0, //Blue color
+        "sk6_"+std::to_string(render_id)
+      );
+
+      //Sk7
+      Eigen::Vector3f sk7_shift = 
+        box_rotate * 
+        Eigen::Vector3f( //Translation from the local coordinate of skeleton node
+          item.sk_n7_x, 
+          item.sk_n7_y, 
+          item.sk_n7_z
+        ) + 
+        box_vector; //Translation of center of the bounding box
+
+      viewer->addSphere(
+        pcl::PointXYZ(
+          //Apply The Vector to the pointxyz
+          sk7_shift(0), 
+          sk7_shift(1), 
+          sk7_shift(2)
+        ),
+        SK_NODE_SIZE, //Radius of the sphere
+        render_id == highlisted_index ? 0.0:1.0, //Red Color
+        render_id == highlisted_index ? 1.0:0.0, //Green Color
+        0.0, //Blue color
+        "sk7_"+std::to_string(render_id)
+      );
+
+      //Sk8
+      Eigen::Vector3f sk8_shift = 
+        box_rotate * 
+        Eigen::Vector3f( //Translation from the local coordinate of skeleton node
+          item.sk_n8_x, 
+          item.sk_n8_y, 
+          item.sk_n8_z
+        ) + 
+        box_vector; //Translation of center of the bounding box
+
+      viewer->addSphere(
+        pcl::PointXYZ(
+          //Apply The Vector to the pointxyz
+          sk8_shift(0), 
+          sk8_shift(1), 
+          sk8_shift(2)
+        ),
+        SK_NODE_SIZE, //Radius of the sphere
+        render_id == highlisted_index ? 0.0:1.0, //Red Color
+        render_id == highlisted_index ? 1.0:0.0, //Green Color
+        0.0, //Blue color
+        "sk8_"+std::to_string(render_id)
+      );
+
+      //Sk9
+      Eigen::Vector3f sk9_shift = 
+        box_rotate * 
+        Eigen::Vector3f( //Translation from the local coordinate of skeleton node
+          item.sk_n9_x, 
+          item.sk_n9_y, 
+          item.sk_n9_z
+        ) + 
+        box_vector; //Translation of center of the bounding box
+
+      viewer->addSphere(
+        pcl::PointXYZ(
+          //Apply The Vector to the pointxyz
+          sk9_shift(0), 
+          sk9_shift(1), 
+          sk9_shift(2)
+        ),
+        SK_NODE_SIZE, //Radius of the sphere
+        render_id == highlisted_index ? 0.0:1.0, //Red Color
+        render_id == highlisted_index ? 1.0:0.0, //Green Color
+        0.0, //Blue color
+        "sk9_"+std::to_string(render_id)
+      );
+
+      //Sk10
+      Eigen::Vector3f sk10_shift = 
+        box_rotate * 
+        Eigen::Vector3f( //Translation from the local coordinate of skeleton node
+          item.sk_n10_x, 
+          item.sk_n10_y, 
+          item.sk_n10_z
+        ) + 
+        box_vector; //Translation of center of the bounding box
+
+      viewer->addSphere(
+        pcl::PointXYZ(
+          //Apply The Vector to the pointxyz
+          sk10_shift(0), 
+          sk10_shift(1), 
+          sk10_shift(2)
+        ),
+        SK_NODE_SIZE, //Radius of the sphere
+        render_id == highlisted_index ? 0.0:1.0, //Red Color
+        render_id == highlisted_index ? 1.0:0.0, //Green Color
+        0.0, //Blue color
+        "sk10_"+std::to_string(render_id)
+      );
+
+      //Sk11
+      Eigen::Vector3f sk11_shift = 
+        box_rotate * 
+        Eigen::Vector3f( //Translation from the local coordinate of skeleton node
+          item.sk_n11_x, 
+          item.sk_n11_y, 
+          item.sk_n11_z
+        ) + 
+        box_vector; //Translation of center of the bounding box
+
+      viewer->addSphere(
+        pcl::PointXYZ(
+          //Apply The Vector to the pointxyz
+          sk11_shift(0), 
+          sk11_shift(1), 
+          sk11_shift(2)
+        ),
+        SK_NODE_SIZE, //Radius of the sphere
+        render_id == highlisted_index ? 0.0:1.0, //Red Color
+        render_id == highlisted_index ? 1.0:0.0, //Green Color
+        0.0, //Blue color
+        "sk11_"+std::to_string(render_id)
+      );
+
+      //Sk12
+      Eigen::Vector3f sk12_shift = 
+        box_rotate * 
+        Eigen::Vector3f( //Translation from the local coordinate of skeleton node
+          item.sk_n12_x, 
+          item.sk_n12_y, 
+          item.sk_n12_z
+        ) + 
+        box_vector; //Translation of center of the bounding box
+
+      viewer->addSphere(
+        pcl::PointXYZ(
+          //Apply The Vector to the pointxyz
+          sk12_shift(0), 
+          sk12_shift(1), 
+          sk12_shift(2)
+        ),
+        SK_NODE_SIZE, //Radius of the sphere
+        render_id == highlisted_index ? 0.0:1.0, //Red Color
+        render_id == highlisted_index ? 1.0:0.0, //Green Color
+        0.0, //Blue color
+        "sk12_"+std::to_string(render_id)
+      );
+
+      //Sk13
+      Eigen::Vector3f sk13_shift = 
+        box_rotate * 
+        Eigen::Vector3f( //Translation from the local coordinate of skeleton node
+          item.sk_n13_x, 
+          item.sk_n13_y, 
+          item.sk_n13_z
+        ) + 
+        box_vector; //Translation of center of the bounding box
+
+      viewer->addSphere(
+        pcl::PointXYZ(
+          //Apply The Vector to the pointxyz
+          sk13_shift(0), 
+          sk13_shift(1), 
+          sk13_shift(2)
+        ),
+        SK_NODE_SIZE, //Radius of the sphere
+        render_id == highlisted_index ? 0.0:1.0, //Red Color
+        render_id == highlisted_index ? 1.0:0.0, //Green Color
+        0.0, //Blue color
+        "sk13_"+std::to_string(render_id)
+      );
+
+      //Sk14
+      Eigen::Vector3f sk14_shift = 
+        box_rotate * 
+        Eigen::Vector3f( //Translation from the local coordinate of skeleton node
+          item.sk_n14_x, 
+          item.sk_n14_y, 
+          item.sk_n14_z
+        ) + 
+        box_vector; //Translation of center of the bounding box
+
+      viewer->addSphere(
+        pcl::PointXYZ(
+          //Apply The Vector to the pointxyz
+          sk14_shift(0), 
+          sk14_shift(1), 
+          sk14_shift(2)
+        ),
+        SK_NODE_SIZE, //Radius of the sphere
+        render_id == highlisted_index ? 0.0:1.0, //Red Color
+        render_id == highlisted_index ? 1.0:0.0, //Green Color
+        0.0, //Blue color
+        "sk14_"+std::to_string(render_id)
+      );
+
+      //Sk15
+      Eigen::Vector3f sk15_shift = 
+        box_rotate * 
+        Eigen::Vector3f( //Translation from the local coordinate of skeleton node
+          item.sk_n15_x, 
+          item.sk_n15_y, 
+          item.sk_n15_z
+        ) + 
+        box_vector; //Translation of center of the bounding box
+
+      viewer->addSphere(
+        pcl::PointXYZ(
+          //Apply The Vector to the pointxyz
+          sk15_shift(0), 
+          sk15_shift(1), 
+          sk15_shift(2)
+        ),
+        SK_NODE_SIZE, //Radius of the sphere
+        render_id == highlisted_index ? 0.0:1.0, //Red Color
+        render_id == highlisted_index ? 1.0:0.0, //Green Color
+        0.0, //Blue color
+        "sk15_"+std::to_string(render_id)
       );
 
 
