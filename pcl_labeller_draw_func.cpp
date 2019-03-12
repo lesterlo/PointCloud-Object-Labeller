@@ -97,6 +97,7 @@ PCL_Labeller::drawAllLabel(int highlisted_index)
     bool drawSkeleton = true;
     if (drawSkeleton)
     {
+      //Add Skeleton Node drawing
       //Sk1
       Eigen::Vector3f sk1_shift = 
         box_rotate * 
@@ -457,7 +458,23 @@ PCL_Labeller::drawAllLabel(int highlisted_index)
         "sk15_"+std::to_string(render_id)
       );
 
-
+      //Add Skeleton Line drawing
+      viewer->addLine(
+        pcl::PointXYZ(
+          sk1_shift.x(),
+          sk1_shift.y(),
+          sk1_shift.z()
+        ),
+        pcl::PointXYZ(
+          sk2_shift.x(),
+          sk2_shift.y(),
+          sk2_shift.z()
+        ),
+        render_id == highlisted_index ? 0.0:1.0, //Red Color
+        render_id == highlisted_index ? 1.0:0.0, //Green Color
+        0.0, //Blue color
+        "line_sk1-2_"+std::to_string(render_id)
+      );
     }
     
     render_id++;//Inrement the id counter
@@ -472,3 +489,4 @@ PCL_Labeller::clean_viewer()
   viewer->removeAllPointClouds(); //Clear all Point Cloud
   viewer->removeAllCoordinateSystems(); //Clear all CoordinateSystem
   viewer->removeAllShapes(); //Clear all Shape such as Cube
+}

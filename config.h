@@ -8,7 +8,7 @@
 //Program parameter
 #define BCUBE_LINEWIDTH 1  //The Bounding box line width
 #define REF_AXIS_WIDTH 0.5 //The Reference XYZ Axis size
-#define SK_NODE_SIZE 0.05   //For skeleton node raidus dize
+#define SK_NODE_SIZE 0.02   //For skeleton node raidus dize
 
 
 //String config
