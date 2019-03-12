@@ -2,15 +2,15 @@
 // Copyright (c) (2018) Lester Lo 
 
 
-#include "pcl_labeller.h"
-#include "config.h"
-#include "../build/ui_pcl_labeller.h"
-
 //###################################################
 //
 //          Core function
 //
 //###################################################
+
+#include "pcl_labeller.h"
+#include "config.h"
+#include "../build/ui_pcl_labeller.h"
 
 //Constructor
 PCL_Labeller::PCL_Labeller (QWidget *parent) :

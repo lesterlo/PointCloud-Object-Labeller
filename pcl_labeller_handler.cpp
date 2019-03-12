@@ -1,3 +1,7 @@
+// License: MIT. Please Check the license file in root directory
+// Copyright (c) (2018) Lester Lo 
+
+
 //###################################################
 //
 //          QT Signal Slot function (handler)
