@@ -12,6 +12,32 @@
 #include "config.h"
 #include "../build/ui_pcl_labeller.h"
 
+//QT open Folder function
+void 
+PCL_Labeller::openFolder()
+{
+  cur_folder_path = QFileDialog::getExistingDirectory(this, tr("Select one or more files to open"), "", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
+  if(cur_folder_path.isEmpty()) //Prevent seg fault
+  {
+    return;
+  }
+  else
+  {
+    this->setWindowTitle(cur_folder_path+QString("   -   ")+QString(WINDOW_TITLE));//Set the path to the title bar
+    //Start read all files under the dir
+    statusBar()->showMessage(tr(READING_FOLDER)+cur_folder_path);
+    QDir folder(cur_folder_path);
+    QStringList pc_files = folder.entryList(QStringList() << "*.pcd",QDir::Files);//Read only .pcd file
+    
+    //Add items to file tab
+    ui->file_listWidget->clear();
+    ui->file_listWidget->addItems(pc_files);
+    label_UI_enable(LABEL_UI_CUROR, true);
+
+    statusBar()->showMessage(tr(FINISH_READING_FOLDER)+cur_folder_path);
+  }
+}
+
 //Function is triggered when the file listWidget item is changed
 void 
 PCL_Labeller::onFileListItemClicked(QListWidgetItem* item)
