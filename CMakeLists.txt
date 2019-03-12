@@ -7,6 +7,15 @@ cmake_minimum_required(VERSION 3.1)
 project(PointCloud_Object_labeller)
 set (CMAKE_CXX_STANDARD 11)
 
+
+# Add Include Path
+message("System Platform: ${CMAKE_SYSTEM_NAME}")
+# For Apple brew special include path
+if(APPLE)
+	message("Add QT path (brew default)")	
+	set(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} /usr/local/Cellar/qt/5.12.0/lib/cmake) # Brew QT include PATH
+endif()
+
 #For QT auto gen
 set(CMAKE_AUTOMOC ON) # For meta object compiler
 set(CMAKE_AUTORCC ON) # Resource files
