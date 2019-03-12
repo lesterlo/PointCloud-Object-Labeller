@@ -475,6 +475,11 @@ PCL_Labeller::drawAllLabel(int highlisted_index)
         0.0, //Blue color
         "line_sk1-2_"+std::to_string(render_id)
       );
+      viewer->setShapeRenderingProperties(
+      pcl::visualization::PCL_VISUALIZER_LINE_WIDTH, 
+      SK_BONE_LINEWIDTH, //Line Width
+      "line_sk1-2_"+std::to_string(render_id)//Use the spcific ID
+    );
     }
     
     render_id++;//Inrement the id counter
