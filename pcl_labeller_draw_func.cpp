@@ -459,6 +459,7 @@ PCL_Labeller::drawAllLabel(int highlisted_index)
       );
 
       //Add Skeleton Line drawing
+      //Line 1-2
       viewer->addLine(
         pcl::PointXYZ(
           sk1_shift.x(),
@@ -476,11 +477,298 @@ PCL_Labeller::drawAllLabel(int highlisted_index)
         "line_sk1-2_"+std::to_string(render_id)
       );
       viewer->setShapeRenderingProperties(
-      pcl::visualization::PCL_VISUALIZER_LINE_WIDTH, 
-      SK_BONE_LINEWIDTH, //Line Width
-      "line_sk1-2_"+std::to_string(render_id)//Use the spcific ID
-    );
-    }
+        pcl::visualization::PCL_VISUALIZER_LINE_WIDTH, 
+        SK_BONE_LINEWIDTH, //Line Width
+        "line_sk1-2_"+std::to_string(render_id)//Use the spcific ID
+      );
+      //Line 2-3
+      viewer->addLine(
+        pcl::PointXYZ(
+          sk2_shift.x(),
+          sk2_shift.y(),
+          sk2_shift.z()
+        ),
+        pcl::PointXYZ(
+          sk3_shift.x(),
+          sk3_shift.y(),
+          sk3_shift.z()
+        ),
+        render_id == highlisted_index ? 0.0:1.0, //Red Color
+        render_id == highlisted_index ? 1.0:0.0, //Green Color
+        0.0, //Blue color
+        "line_sk2-3_"+std::to_string(render_id)
+      );
+      viewer->setShapeRenderingProperties(
+        pcl::visualization::PCL_VISUALIZER_LINE_WIDTH, 
+        SK_BONE_LINEWIDTH, //Line Width
+        "line_sk2-3_"+std::to_string(render_id)//Use the spcific ID
+      );
+      //Line 2-4
+      viewer->addLine(
+        pcl::PointXYZ(
+          sk2_shift.x(),
+          sk2_shift.y(),
+          sk2_shift.z()
+        ),
+        pcl::PointXYZ(
+          sk4_shift.x(),
+          sk4_shift.y(),
+          sk4_shift.z()
+        ),
+        render_id == highlisted_index ? 0.0:1.0, //Red Color
+        render_id == highlisted_index ? 1.0:0.0, //Green Color
+        0.0, //Blue color
+        "line_sk2-4_"+std::to_string(render_id)
+      );
+      viewer->setShapeRenderingProperties(
+        pcl::visualization::PCL_VISUALIZER_LINE_WIDTH, 
+        SK_BONE_LINEWIDTH, //Line Width
+        "line_sk2-4_"+std::to_string(render_id)//Use the spcific ID
+      );
+      //Line 2-7
+      viewer->addLine(
+        pcl::PointXYZ(
+          sk2_shift.x(),
+          sk2_shift.y(),
+          sk2_shift.z()
+        ),
+        pcl::PointXYZ(
+          sk7_shift.x(),
+          sk7_shift.y(),
+          sk7_shift.z()
+        ),
+        render_id == highlisted_index ? 0.0:1.0, //Red Color
+        render_id == highlisted_index ? 1.0:0.0, //Green Color
+        0.0, //Blue color
+        "line_sk2-7_"+std::to_string(render_id)
+      );
+      viewer->setShapeRenderingProperties(
+        pcl::visualization::PCL_VISUALIZER_LINE_WIDTH, 
+        SK_BONE_LINEWIDTH, //Line Width
+        "line_sk2-7_"+std::to_string(render_id)//Use the spcific ID
+      );
+      //Line 4-5
+      viewer->addLine(
+        pcl::PointXYZ(
+          sk4_shift.x(),
+          sk4_shift.y(),
+          sk4_shift.z()
+        ),
+        pcl::PointXYZ(
+          sk5_shift.x(),
+          sk5_shift.y(),
+          sk5_shift.z()
+        ),
+        render_id == highlisted_index ? 0.0:1.0, //Red Color
+        render_id == highlisted_index ? 1.0:0.0, //Green Color
+        0.0, //Blue color
+        "line_sk4-5_"+std::to_string(render_id)
+      );
+      viewer->setShapeRenderingProperties(
+        pcl::visualization::PCL_VISUALIZER_LINE_WIDTH, 
+        SK_BONE_LINEWIDTH, //Line Width
+        "line_sk4-5_"+std::to_string(render_id)//Use the spcific ID
+      );
+      //Line 5-6
+      viewer->addLine(
+        pcl::PointXYZ(
+          sk5_shift.x(),
+          sk5_shift.y(),
+          sk5_shift.z()
+        ),
+        pcl::PointXYZ(
+          sk6_shift.x(),
+          sk6_shift.y(),
+          sk6_shift.z()
+        ),
+        render_id == highlisted_index ? 0.0:1.0, //Red Color
+        render_id == highlisted_index ? 1.0:0.0, //Green Color
+        0.0, //Blue color
+        "line_sk5-6_"+std::to_string(render_id)
+      );
+      viewer->setShapeRenderingProperties(
+        pcl::visualization::PCL_VISUALIZER_LINE_WIDTH, 
+        SK_BONE_LINEWIDTH, //Line Width
+        "line_sk5-6_"+std::to_string(render_id)//Use the spcific ID
+      );
+      //Line 7-8
+      viewer->addLine(
+        pcl::PointXYZ(
+          sk7_shift.x(),
+          sk7_shift.y(),
+          sk7_shift.z()
+        ),
+        pcl::PointXYZ(
+          sk8_shift.x(),
+          sk8_shift.y(),
+          sk8_shift.z()
+        ),
+        render_id == highlisted_index ? 0.0:1.0, //Red Color
+        render_id == highlisted_index ? 1.0:0.0, //Green Color
+        0.0, //Blue color
+        "line_sk7-8_"+std::to_string(render_id)
+      );
+      viewer->setShapeRenderingProperties(
+        pcl::visualization::PCL_VISUALIZER_LINE_WIDTH, 
+        SK_BONE_LINEWIDTH, //Line Width
+        "line_sk7-8_"+std::to_string(render_id)//Use the spcific ID
+      );
+      //Line 8-9
+      viewer->addLine(
+        pcl::PointXYZ(
+          sk8_shift.x(),
+          sk8_shift.y(),
+          sk8_shift.z()
+        ),
+        pcl::PointXYZ(
+          sk9_shift.x(),
+          sk9_shift.y(),
+          sk9_shift.z()
+        ),
+        render_id == highlisted_index ? 0.0:1.0, //Red Color
+        render_id == highlisted_index ? 1.0:0.0, //Green Color
+        0.0, //Blue color
+        "line_sk8-9_"+std::to_string(render_id)
+      );
+      viewer->setShapeRenderingProperties(
+        pcl::visualization::PCL_VISUALIZER_LINE_WIDTH, 
+        SK_BONE_LINEWIDTH, //Line Width
+        "line_sk8-9_"+std::to_string(render_id)//Use the spcific ID
+      );
+      //Line 3-10
+      viewer->addLine(
+        pcl::PointXYZ(
+          sk3_shift.x(),
+          sk3_shift.y(),
+          sk3_shift.z()
+        ),
+        pcl::PointXYZ(
+          sk10_shift.x(),
+          sk10_shift.y(),
+          sk10_shift.z()
+        ),
+        render_id == highlisted_index ? 0.0:1.0, //Red Color
+        render_id == highlisted_index ? 1.0:0.0, //Green Color
+        0.0, //Blue color
+        "line_sk3-10_"+std::to_string(render_id)
+      );
+      viewer->setShapeRenderingProperties(
+        pcl::visualization::PCL_VISUALIZER_LINE_WIDTH, 
+        SK_BONE_LINEWIDTH, //Line Width
+        "line_sk3-10_"+std::to_string(render_id)//Use the spcific ID
+      );
+      //Line 10-11
+      viewer->addLine(
+        pcl::PointXYZ(
+          sk10_shift.x(),
+          sk10_shift.y(),
+          sk10_shift.z()
+        ),
+        pcl::PointXYZ(
+          sk11_shift.x(),
+          sk11_shift.y(),
+          sk11_shift.z()
+        ),
+        render_id == highlisted_index ? 0.0:1.0, //Red Color
+        render_id == highlisted_index ? 1.0:0.0, //Green Color
+        0.0, //Blue color
+        "line_sk10-11_"+std::to_string(render_id)
+      );
+      viewer->setShapeRenderingProperties(
+        pcl::visualization::PCL_VISUALIZER_LINE_WIDTH, 
+        SK_BONE_LINEWIDTH, //Line Width
+        "line_sk10-11_"+std::to_string(render_id)//Use the spcific ID
+      );
+      //Line 11-12
+      viewer->addLine(
+        pcl::PointXYZ(
+          sk11_shift.x(),
+          sk11_shift.y(),
+          sk11_shift.z()
+        ),
+        pcl::PointXYZ(
+          sk12_shift.x(),
+          sk12_shift.y(),
+          sk12_shift.z()
+        ),
+        render_id == highlisted_index ? 0.0:1.0, //Red Color
+        render_id == highlisted_index ? 1.0:0.0, //Green Color
+        0.0, //Blue color
+        "line_sk11-12_"+std::to_string(render_id)
+      );
+      viewer->setShapeRenderingProperties(
+        pcl::visualization::PCL_VISUALIZER_LINE_WIDTH, 
+        SK_BONE_LINEWIDTH, //Line Width
+        "line_sk11-12_"+std::to_string(render_id)//Use the spcific ID
+      );
+      //Line 3-13
+      viewer->addLine(
+        pcl::PointXYZ(
+          sk3_shift.x(),
+          sk3_shift.y(),
+          sk3_shift.z()
+        ),
+        pcl::PointXYZ(
+          sk13_shift.x(),
+          sk13_shift.y(),
+          sk13_shift.z()
+        ),
+        render_id == highlisted_index ? 0.0:1.0, //Red Color
+        render_id == highlisted_index ? 1.0:0.0, //Green Color
+        0.0, //Blue color
+        "line_sk3-13_"+std::to_string(render_id)
+      );
+      viewer->setShapeRenderingProperties(
+        pcl::visualization::PCL_VISUALIZER_LINE_WIDTH, 
+        SK_BONE_LINEWIDTH, //Line Width
+        "line_sk3-13_"+std::to_string(render_id)//Use the spcific ID
+      );
+      //Line 13-4
+      viewer->addLine(
+        pcl::PointXYZ(
+          sk13_shift.x(),
+          sk13_shift.y(),
+          sk13_shift.z()
+        ),
+        pcl::PointXYZ(
+          sk14_shift.x(),
+          sk14_shift.y(),
+          sk14_shift.z()
+        ),
+        render_id == highlisted_index ? 0.0:1.0, //Red Color
+        render_id == highlisted_index ? 1.0:0.0, //Green Color
+        0.0, //Blue color
+        "line_sk13-14_"+std::to_string(render_id)
+      );
+      viewer->setShapeRenderingProperties(
+        pcl::visualization::PCL_VISUALIZER_LINE_WIDTH, 
+        SK_BONE_LINEWIDTH, //Line Width
+        "line_sk13-14_"+std::to_string(render_id)//Use the spcific ID
+      );
+      //Line 14-15
+      viewer->addLine(
+        pcl::PointXYZ(
+          sk14_shift.x(),
+          sk14_shift.y(),
+          sk14_shift.z()
+        ),
+        pcl::PointXYZ(
+          sk15_shift.x(),
+          sk15_shift.y(),
+          sk15_shift.z()
+        ),
+        render_id == highlisted_index ? 0.0:1.0, //Red Color
+        render_id == highlisted_index ? 1.0:0.0, //Green Color
+        0.0, //Blue color
+        "line_sk14-15_"+std::to_string(render_id)
+      );
+      viewer->setShapeRenderingProperties(
+        pcl::visualization::PCL_VISUALIZER_LINE_WIDTH, 
+        SK_BONE_LINEWIDTH, //Line Width
+        "line_sk14-15_"+std::to_string(render_id)//Use the spcific ID
+      );
+
+    }//END-if(draw_skeleton)
     
     render_id++;//Inrement the id counter
   }
