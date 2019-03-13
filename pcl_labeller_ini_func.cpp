@@ -25,6 +25,8 @@ PCL_Labeller::createActions()
   aboutAct->setStatusTip(tr("Show the application's About box"));
   connect(aboutAct, &QAction::triggered, this, &PCL_Labeller::about);
 
+  
+  connect(ui->cfp_pb, SIGNAL(pressed()), this, SLOT(onCopyPrevLabelClicked()));
 
   //Connect signal
   //currentItemChanged will emit signal rather readd the items on the listWidget

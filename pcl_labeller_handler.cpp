@@ -38,6 +38,16 @@ PCL_Labeller::openFolder()
   }
 }
 
+//QT open
+void 
+PCL_Labeller::onCopyPrevLabelClicked()
+{
+  label_holder = prev_label_holder; //Copy back the label item
+  clearLabelUI();
+  construct_labelWidget();
+  drawAllLabel(-1);//Update the UI that the show elemnt is same with the label_holder vector
+}
+
 //Function is triggered when the file listWidget item is changed
 void 
 PCL_Labeller::onFileListItemClicked(QListWidgetItem* item)
@@ -45,7 +55,8 @@ PCL_Labeller::onFileListItemClicked(QListWidgetItem* item)
   if(item != NULL)//Prevent seg fault when clearing all items on QListWidget
   {
     //Pre open procedure
-    label_holder.clear();
+    prev_label_holder = label_holder;//Keep to current label holder's data 
+    label_holder.clear();//Clear 
     cur_pcd_file = item->text();//Get the pcd file name
     this->setWindowTitle(cur_pcd_file+QString("   -   ")+cur_folder_path+QString("   -   ")+QString(WINDOW_TITLE));//Change title
     

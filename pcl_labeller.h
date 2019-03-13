@@ -58,6 +58,8 @@ protected:
 private slots:
   void openFolder();
   void about();
+
+  void onCopyPrevLabelClicked();
   void onFileListItemClicked(QListWidgetItem *);
   void onLabelListItemClicked(QListWidgetItem *);
   void onPrevPCDButtonClicked();
@@ -100,6 +102,7 @@ private:
   QString cur_label_file;
 
   //C std Area
+  std::vector<HSTM_Label> prev_label_holder;
   std::vector<HSTM_Label> label_holder;
   int prev_label_index; //For save label
   // QDoubleSpinBox* ui_sk_storage[SKELETON_NODE_COUNT * 3];
