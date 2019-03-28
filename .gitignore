@@ -4,3 +4,4 @@ label/
 ~*
 *.pcd
 *.zip
+.DS_Store
