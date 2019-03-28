@@ -49,7 +49,7 @@ PCL_Labeller::openFolder()
       //Add items to file tab
       ui->file_listWidget->addItems(pc_files);
 
-      statusBar()->showMessage(tr(FINISH_READING_FOLDER)+cur_folder_path);
+      statusBar()->showMessage(tr(FINISH_READING_FOLDER_1)+QString(std::to_string(pc_files.size()).c_str())+tr(FINISH_READING_FOLDER_2)+cur_folder_path);
     }
   }
 }
