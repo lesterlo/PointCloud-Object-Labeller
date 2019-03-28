@@ -22,6 +22,7 @@
 
 #define ERROR_DIALOG_TITLE "Error !"
 #define READING_FOLDER "Reading Folder: "
+#define NO_TARGET_FILE_FOUND "No pcd file found at: "
 #define FINISH_READING_FOLDER "Finish reading Folder: "
 #define CANNOT_OPEN_PCD "Cannot read pcd file: "
 #define CAN_OPEN_PCD "Successfully read the pcd file: "

@@ -16,6 +16,7 @@
 void 
 PCL_Labeller::openFolder()
 {
+  clean_viewer(); //Clean the viewer first
   cur_folder_path = QFileDialog::getExistingDirectory(this, tr("Select one or more files to open"), "", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
   if(cur_folder_path.isEmpty()) //Prevent seg fault
   {
@@ -28,13 +29,28 @@ PCL_Labeller::openFolder()
     statusBar()->showMessage(tr(READING_FOLDER)+cur_folder_path);
     QDir folder(cur_folder_path);
     QStringList pc_files = folder.entryList(QStringList() << "*.pcd",QDir::Files);//Read only .pcd file
-    
-    //Add items to file tab
-    ui->file_listWidget->clear();
-    ui->file_listWidget->addItems(pc_files);
-    label_UI_enable(LABEL_UI_CUROR, true);
+    ui->file_listWidget->clear(); //Clear the file tab
 
-    statusBar()->showMessage(tr(FINISH_READING_FOLDER)+cur_folder_path);
+    //Check whether the pc_files cotain element
+    if(pc_files.size() == 0)
+    {
+      //Enable the UI element
+      label_UI_enable(LABEL_UI_CUROR, false);
+      label_UI_enable(LABEL_UI, false);
+
+      statusBar()->showMessage(tr(NO_TARGET_FILE_FOUND)+cur_folder_path);
+    }
+    else
+    {
+      //Enable the UI element
+      label_UI_enable(LABEL_UI_CUROR, true);
+      label_UI_enable(LABEL_UI, true);
+      
+      //Add items to file tab
+      ui->file_listWidget->addItems(pc_files);
+
+      statusBar()->showMessage(tr(FINISH_READING_FOLDER)+cur_folder_path);
+    }
   }
 }
 
