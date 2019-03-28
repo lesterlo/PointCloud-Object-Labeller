@@ -13,7 +13,7 @@ message("System Platform: ${CMAKE_SYSTEM_NAME}")
 # For Apple brew special include path
 if(APPLE)
 	message("Add QT path (brew default)")	
-	set(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} /usr/local/Cellar/qt/5.12.0/lib/cmake) # Brew QT include PATH
+	set(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} /usr/local/Cellar/qt/5.12.2/lib/cmake) # Brew QT include PATH
 endif()
 
 #For QT auto gen
