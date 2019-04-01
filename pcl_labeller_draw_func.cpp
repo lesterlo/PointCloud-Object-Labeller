@@ -44,8 +44,8 @@ PCL_Labeller::drawAllLabel(int highlisted_index)
       viewer->addCoordinateSystem(
         REF_AXIS_WIDTH, //Scale size
         Eigen::Affine3f( //Add Pose
-          Eigen::Translation3f(box_vector) * //Add translation
-          box_rotate//Add X, Y, Z rotation
+          Eigen::Translation3f(box_vector)//Add translation
+          //* box_rotate//Add X, Y, Z rotation
         ),
         "cs_"+std::to_string(render_id)//Specific ID, for coordinateSystem (cs_)
       );
