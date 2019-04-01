@@ -6,7 +6,7 @@
 #define PCL_LABELLER_CONFIG_H_
 
 //Program parameter
-#define PC_VISUALIZATION_SIZE 2
+#define PC_VISUALIZATION_SIZE 1.07
 #define BCUBE_LINEWIDTH 1       //The Bounding box line width
 #define REF_AXIS_WIDTH 0.5      //The Reference XYZ Axis size
 #define REF_ARROW_LINEWIDTH 7
