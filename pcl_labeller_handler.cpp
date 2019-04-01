@@ -477,3 +477,9 @@ PCL_Labeller::onNextPCDButtonClicked()
     ui->nextPCD_pb->setEnabled(false);
   }
 }
+
+void
+PCL_Labeller::onDataInputTabChange(int index)
+{
+  drawAllLabel(ui->label_listWidget->currentRow());
+}

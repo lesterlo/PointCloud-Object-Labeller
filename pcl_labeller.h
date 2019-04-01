@@ -69,6 +69,7 @@ private slots:
   void onDeleteLabelButtonClicked();
   void onLabelEditFinish();
   void onLabelValueChange(double);
+  void onDataInputTabChange(int );
 
 private:
   //function

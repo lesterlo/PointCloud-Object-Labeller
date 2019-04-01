@@ -28,6 +28,8 @@ PCL_Labeller::labelUI_Signal_enable(bool state)
     connect(ui->heighty_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
     connect(ui->depthz_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
 
+    connect(ui->tabWidget, SIGNAL(currentChanged(int )),  this, SLOT(onDataInputTabChange(int )));
+
     //Joint Tab
     connect(ui->sk_n1x_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
     connect(ui->sk_n1y_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
@@ -87,6 +89,7 @@ PCL_Labeller::labelUI_Signal_enable(bool state)
     disconnect(ui->widthx_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
     disconnect(ui->heighty_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
     disconnect(ui->depthz_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
+    disconnect(ui->tabWidget, SIGNAL(currentChanged(int )),  this, SLOT(onDataInputTabChange(int )));
 
     //Joint tab
     disconnect(ui->sk_n1x_dsb, SIGNAL(valueChanged(double )),  this, SLOT(onLabelValueChange(double)));
