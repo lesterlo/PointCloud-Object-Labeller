@@ -390,7 +390,7 @@
                    <number>1</number>
                   </property>
                   <property name="minimum">
-                   <double>0.000000000000000</double>
+                   <double>-359.899999999999977</double>
                   </property>
                   <property name="maximum">
                    <double>359.899999999999977</double>
@@ -493,6 +493,9 @@
                   <property name="decimals">
                    <number>1</number>
                   </property>
+                  <property name="minimum">
+                   <double>-359.899999999999977</double>
+                  </property>
                   <property name="maximum">
                    <double>359.899999999999977</double>
                   </property>
@@ -594,6 +597,9 @@
                   </property>
                   <property name="decimals">
                    <number>1</number>
+                  </property>
+                  <property name="minimum">
+                   <double>-359.899999999999977</double>
                   </property>
                   <property name="maximum">
                    <double>359.899999999999977</double>
@@ -816,8 +822,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>1209</width>
-                 <height>360</height>
+                 <width>798</width>
+                 <height>200</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_16">
@@ -3145,7 +3151,7 @@
      <x>0</x>
      <y>0</y>
      <width>1280</width>
-     <height>26</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
