@@ -5,6 +5,10 @@
 #ifndef PCL_LABELLER_H
 #define PCL_LABELLER_H
 
+#include "label_define.h"
+
+#define TO_RAD(DEG) (DEG * (M_PI/180.0))
+
 //Include
 //std
 #include <iostream>
@@ -31,26 +35,6 @@ typedef pcl::PointCloud<PointT> PointCloudT;
 
 enum {LABEL_UI_CUROR, LABEL_UI};
 
-typedef struct
-{
-  std::string type;
-  double truncated;
-  int occluded;
-  double alpha;
-  double x_min;
-  double y_min;
-  double x_max;
-  double y_max;
-  double obj_height;
-  double obj_width;
-  double obj_length;
-  double obj_x;
-  double obj_y;
-  double obj_z;
-  double rotation_y;
-} KITTI_Label;
-
-
 
 //QT Class decalration
 namespace Ui
@@ -74,6 +58,8 @@ protected:
 private slots:
   void openFolder();
   void about();
+
+  void onCopyPrevLabelClicked();
   void onFileListItemClicked(QListWidgetItem *);
   void onLabelListItemClicked(QListWidgetItem *);
   void onPrevPCDButtonClicked();
@@ -83,6 +69,7 @@ private slots:
   void onDeleteLabelButtonClicked();
   void onLabelEditFinish();
   void onLabelValueChange(double);
+  void onDataInputTabChange(int );
 
 private:
   //function
@@ -100,6 +87,7 @@ private:
   void createActions();
   void createMenus();
   void contextMenuEvent(QContextMenuEvent *event);
+  void prepareUI();
   
   //QMenu
   QMenu *fileMenu;
@@ -115,8 +103,10 @@ private:
   QString cur_label_file;
 
   //C std Area
-  std::vector<KITTI_Label> label_holder;
+  std::vector<HSTM_Label> prev_label_holder;
+  std::vector<HSTM_Label> label_holder;
   int prev_label_index; //For save label
+  // QDoubleSpinBox* ui_sk_storage[SKELETON_NODE_COUNT * 3];
 
 };
 
