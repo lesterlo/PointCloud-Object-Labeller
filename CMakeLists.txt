@@ -13,7 +13,7 @@ message("System Platform: ${CMAKE_SYSTEM_NAME}")
 # For Apple brew special include path
 if(APPLE)
 	message("Add QT path (brew default)")	
-	set(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} /usr/local/Cellar/qt/5.12.0/lib/cmake) # Brew QT include PATH
+	set(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} /usr/local/Cellar/qt/5.12.2/lib/cmake) # Brew QT include PATH
 endif()
 
 #For QT auto gen
@@ -34,7 +34,7 @@ list(REMOVE_ITEM PCL_LIBRARIES "vtkproj4")
 include_directories(${PCL_INCLUDE_DIRS})
 add_definitions(${PCL_DEFINITIONS})
 
-set(project_SOURCES main.cpp pcl_labeller.cpp)
+file(GLOB project_SOURCES *.cpp) #find source file
 
 add_executable(${PROJECT_NAME} ${project_SOURCES})
 
