@@ -5,7 +5,7 @@
 cmake_minimum_required(VERSION 3.1)
 
 project(PointCloud_Object_labeller)
-set (CMAKE_CXX_STANDARD 11)
+set (CMAKE_CXX_STANDARD 17)
 
 
 # Add Include Path
