@@ -9,6 +9,19 @@ Please install the following dependencies:
 2.  vtk  >= 6.2
 3.  PCL  >= 1.8
 
+I have tested this program on the following dependencies:
+|MacOS | |
+|---|---|
+|qt| 5.14.2|
+|vtk| 6.2, 8.2|
+|PCL | 1.9.1, 1.10|
+
+|Ubuntu | |
+|---|---|
+|qt| 5.9.5+dfsg-0ubuntu2.5|
+|vtk| 6.3.0+dfsg1-11build1|
+|PCL | 1.9.1|
+
 I have tested this program on the following OS:
 
 | OS Version |
@@ -16,6 +29,7 @@ I have tested this program on the following OS:
 |Linux ubuntu 16.04.3|
 |Linux ubuntu 18.04.1|
 |MacOS 10.14.1|
+|MacOS 10.15.4|
 
 Please visit the following website to compile a compatible version of PCL.
 
@@ -39,3 +53,5 @@ The installation procedure is optional
 ```
 make install 
 ```
+
+## Troubleshooting
