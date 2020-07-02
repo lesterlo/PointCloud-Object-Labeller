@@ -95,7 +95,7 @@ PCL_Labeller::onFileListItemClicked(QListWidgetItem* item)
       statusBar()->showMessage(tr(CAN_OPEN_PCD)+cur_pcd_file);
       viewer->addPointCloud(display_cloud, "cloud");// Add the current pointcloud to the viewer
       viewer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, PC_VISUALIZATION_SIZE, "cloud");
-      ui->qvtkWidget->GetRenderWindow()->Render(); //Update the qvtk widget
+      ui->qt_pcl_Visualizer->GetRenderWindow()->Render(); //Update the qvtk widget
       //Prepare the label file name
       cur_label_file = QString::fromStdString(std::regex_replace(cur_pcd_file.toStdString(), std::regex(".pcd"), ".hst"));//Replace .pcd to .hst
       //Then load the label file
