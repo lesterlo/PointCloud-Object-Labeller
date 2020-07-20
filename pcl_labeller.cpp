@@ -11,6 +11,7 @@
 #include "pcl_labeller.h"
 #include "config.h"
 #include "../build/ui_pcl_labeller.h"
+#include "../build/ui_pcl_labeller_opengl.h"
 
 //Constructor
 PCL_Labeller::PCL_Labeller (QWidget *parent) :

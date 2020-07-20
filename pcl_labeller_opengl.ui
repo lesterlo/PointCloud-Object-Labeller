@@ -53,7 +53,7 @@
          <number>3</number>
         </property>
         <item>
-         <widget class="QVTKWidget" name="qt_pcl_Visualizer" native="true"/>
+         <widget class="QVTKOpenGLNativeWidget" name="qt_pcl_Visualizer" native="true"/>
         </item>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -3159,9 +3159,9 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>QVTKWidget</class>
+   <class>QVTKOpenGLNativeWidget</class>
    <extends>QWidget</extends>
-   <header>QVTKWidget.h</header>
+   <header>QVTKOpenGLNativeWidget.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
