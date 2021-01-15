@@ -39,9 +39,9 @@ set(CMAKE_AUTOUIC ON) # UI files
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 #Find required package
+find_package(PCL 1.8 REQUIRED)
 find_package(Qt5 REQUIRED Widgets)
 find_package(VTK REQUIRED)
-find_package(PCL 1.8 REQUIRED)
 
 #Fix error when installed both vtk4 and vtk5
 list(REMOVE_ITEM PCL_LIBRARIES "vtkproj4")
@@ -55,7 +55,7 @@ file(GLOB project_SOURCES *.cpp) #find source file
 
 add_executable(${PROJECT_NAME} ${project_SOURCES})
 
-target_link_libraries(${PROJECT_NAME} ${PCL_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} ${PCL_LIBRARIES} ${VTK_LIBRARIES})
 
 #Fix QT Problem
 qt5_use_modules(${PROJECT_NAME} Widgets)
